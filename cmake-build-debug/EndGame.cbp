@@ -82,7 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/chessBoard.cpp">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/chessBoard.h">
+			<Option target="EndGame"/>
+		</Unit>
 		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/main.cpp">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/piece.cpp">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/piece.h">
 			<Option target="EndGame"/>
 		</Unit>
 		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/CMakeLists.txt">

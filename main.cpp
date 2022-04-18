@@ -6,5 +6,5 @@ int main() {
 
     board.boardInit();
 
-    //board.printBoard();
+    board.printBoard();
 }

@@ -41,6 +41,9 @@ void chessBoard::boardInit(std::string fenString) {
                 case 'b':
                     currType = piece::bishop;
                     break;
+                case 'r':
+                    currType = piece::rook;
+                    break;
                 case 'q':
                     currType = piece::queen;
                     break;
@@ -114,10 +117,12 @@ void chessBoard::boardInit(std::string fenString) {
 }
 
 void chessBoard::printBoard() {
-    for (int i = 7; i > -1; ++i) {
+
+
+    for (int i = 7; i > -1; --i) {
 
         for (int j = 0; j < 8; ++j) {
-            if(j == 7){
+            if(j == 0){
                 std::cout << std::endl;
             }
 
@@ -126,7 +131,7 @@ void chessBoard::printBoard() {
                 std::cout << pieceArr[(8 * i) + j]->pieceChar();
 
             } else {
-                std::cout << " ";
+                std::cout << "-";
 
             }
 

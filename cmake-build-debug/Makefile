@@ -128,6 +128,30 @@ EndGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/build
 .PHONY : EndGame/fast
 
+chessBoard.obj: chessBoard.cpp.obj
+.PHONY : chessBoard.obj
+
+# target to build an object file
+chessBoard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/chessBoard.cpp.obj
+.PHONY : chessBoard.cpp.obj
+
+chessBoard.i: chessBoard.cpp.i
+.PHONY : chessBoard.i
+
+# target to preprocess a source file
+chessBoard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/chessBoard.cpp.i
+.PHONY : chessBoard.cpp.i
+
+chessBoard.s: chessBoard.cpp.s
+.PHONY : chessBoard.s
+
+# target to generate assembly for a file
+chessBoard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/chessBoard.cpp.s
+.PHONY : chessBoard.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -152,6 +176,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+piece.obj: piece.cpp.obj
+.PHONY : piece.obj
+
+# target to build an object file
+piece.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/piece.cpp.obj
+.PHONY : piece.cpp.obj
+
+piece.i: piece.cpp.i
+.PHONY : piece.i
+
+# target to preprocess a source file
+piece.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/piece.cpp.i
+.PHONY : piece.cpp.i
+
+piece.s: piece.cpp.s
+.PHONY : piece.s
+
+# target to generate assembly for a file
+piece.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/piece.cpp.s
+.PHONY : piece.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... EndGame
+	@echo ... chessBoard.obj
+	@echo ... chessBoard.i
+	@echo ... chessBoard.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... piece.obj
+	@echo ... piece.i
+	@echo ... piece.s
 .PHONY : help
 
 

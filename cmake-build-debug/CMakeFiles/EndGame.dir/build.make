@@ -82,19 +82,51 @@ CMakeFiles/EndGame.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EndGame.dir/main.cpp.s"
 	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\main.cpp" -o CMakeFiles\EndGame.dir\main.cpp.s
 
+CMakeFiles/EndGame.dir/chessBoard.cpp.obj: CMakeFiles/EndGame.dir/flags.make
+CMakeFiles/EndGame.dir/chessBoard.cpp.obj: ../chessBoard.cpp
+CMakeFiles/EndGame.dir/chessBoard.cpp.obj: CMakeFiles/EndGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EndGame.dir/chessBoard.cpp.obj"
+	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EndGame.dir/chessBoard.cpp.obj -MF CMakeFiles\EndGame.dir\chessBoard.cpp.obj.d -o CMakeFiles\EndGame.dir\chessBoard.cpp.obj -c "C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\chessBoard.cpp"
+
+CMakeFiles/EndGame.dir/chessBoard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EndGame.dir/chessBoard.cpp.i"
+	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\chessBoard.cpp" > CMakeFiles\EndGame.dir\chessBoard.cpp.i
+
+CMakeFiles/EndGame.dir/chessBoard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EndGame.dir/chessBoard.cpp.s"
+	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\chessBoard.cpp" -o CMakeFiles\EndGame.dir\chessBoard.cpp.s
+
+CMakeFiles/EndGame.dir/piece.cpp.obj: CMakeFiles/EndGame.dir/flags.make
+CMakeFiles/EndGame.dir/piece.cpp.obj: ../piece.cpp
+CMakeFiles/EndGame.dir/piece.cpp.obj: CMakeFiles/EndGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EndGame.dir/piece.cpp.obj"
+	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EndGame.dir/piece.cpp.obj -MF CMakeFiles\EndGame.dir\piece.cpp.obj.d -o CMakeFiles\EndGame.dir\piece.cpp.obj -c "C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\piece.cpp"
+
+CMakeFiles/EndGame.dir/piece.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EndGame.dir/piece.cpp.i"
+	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\piece.cpp" > CMakeFiles\EndGame.dir\piece.cpp.i
+
+CMakeFiles/EndGame.dir/piece.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EndGame.dir/piece.cpp.s"
+	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\piece.cpp" -o CMakeFiles\EndGame.dir\piece.cpp.s
+
 # Object files for target EndGame
 EndGame_OBJECTS = \
-"CMakeFiles/EndGame.dir/main.cpp.obj"
+"CMakeFiles/EndGame.dir/main.cpp.obj" \
+"CMakeFiles/EndGame.dir/chessBoard.cpp.obj" \
+"CMakeFiles/EndGame.dir/piece.cpp.obj"
 
 # External object files for target EndGame
 EndGame_EXTERNAL_OBJECTS =
 
 EndGame.exe: CMakeFiles/EndGame.dir/main.cpp.obj
+EndGame.exe: CMakeFiles/EndGame.dir/chessBoard.cpp.obj
+EndGame.exe: CMakeFiles/EndGame.dir/piece.cpp.obj
 EndGame.exe: CMakeFiles/EndGame.dir/build.make
 EndGame.exe: CMakeFiles/EndGame.dir/linklibs.rsp
 EndGame.exe: CMakeFiles/EndGame.dir/objects1.rsp
 EndGame.exe: CMakeFiles/EndGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable EndGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable EndGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\EndGame.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
