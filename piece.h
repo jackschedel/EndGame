@@ -1,6 +1,9 @@
 #include <string>
 #include <cctype>
 #include <locale>
+#include <vector>
+#include "pieceMove.h"
+class chessBoard;
 
 #ifndef ENDGAME_PIECE_H
 #define ENDGAME_PIECE_H
@@ -17,6 +20,8 @@ public:
     piece(enum type type, enum color color);
 
     char pieceChar();
+
+    std::vector<pieceMove>* generatePseudoLegalMoves(int position, chessBoard* board);
 
 
 };
