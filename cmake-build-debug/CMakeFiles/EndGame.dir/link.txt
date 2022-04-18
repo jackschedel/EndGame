@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\EndGame.dir/objects.a
+C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\ar.exe cr CMakeFiles\EndGame.dir/objects.a @CMakeFiles\EndGame.dir\objects1.rsp
+C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\EndGame.dir/objects.a -Wl,--no-whole-archive -o EndGame.exe -Wl,--out-implib,libEndGame.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\EndGame.dir\linklibs.rsp
