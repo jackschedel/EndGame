@@ -14,15 +14,19 @@ public:
     int to;
     int capturing;
 
+    upgradeType upgradeType = na;
     specialMove specialMove;
 
-    pieceMove(class piece* piece, int from, int to,enum specialMove specialMove = none, int capturing = -1) {
+    pieceMove(class piece* piece, int from, int to,enum specialMove specialMove = none, int capturing = -1, enum upgradeType upgradeType = na) {
 
         this->piece = piece;
         this->from = from;
         this->to = to;
         this->capturing = capturing;
         this->specialMove = specialMove;
+        if(specialMove == upgrade) {
+            this->upgradeType = upgradeType;
+        }
 
     };
 };
