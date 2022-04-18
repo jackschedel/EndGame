@@ -1,4 +1,5 @@
 #include <string>
+#include <cctype>
 #include <locale>
 
 #ifndef ENDGAME_PIECE_H
@@ -13,14 +14,9 @@ public:
     type type;
     color color;
 
-    bool specialMove = true;
-    /*
-     * for kings + rooks: specialMove is whether castle is allowed,
-     * is set to false after moving
-     * en passant + pawn double move will not be handled here.
-     */
+    piece(enum type type, enum color color);
 
-    piece(enum type type, enum type color);
+    char pieceChar();
 
 
 };
