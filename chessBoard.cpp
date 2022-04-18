@@ -57,9 +57,9 @@ void chessBoard::boardInit(std::string fenString) {
             if(toPlace) {
 
                 if(tempLower == fenString[i]) {
-                    currColor = piece::white;
-                } else {
                     currColor = piece::black;
+                } else {
+                    currColor = piece::white;
                 }
 
 
@@ -101,10 +101,15 @@ void chessBoard::boardInit(std::string fenString) {
         } else if(initState == 3) {
 
             if(fenString[i] != '-' && passantFile == -1) {
-                passantFile = (fenString[i] * 8);
+                passantFile = fenString[i] - 97;
 
             }else if(passantFile != -1) {
-                enPassantTarget = passantFile + fenString[i] - 1;
+                /*
+                std::cout << passantFile << std::endl;
+                std::cout << (fenString[i] - 49) * 8 << std::endl;
+                 */
+
+                enPassantTarget = passantFile + (fenString[i] - 49) * 8;
             }
 
         }
@@ -119,14 +124,14 @@ void chessBoard::boardInit(std::string fenString) {
 void chessBoard::printBoard() {
 
 
-    for (int i = 7; i > -1; --i) {
+    for (int i = 0; i < 8; ++i) {
 
         for (int j = 0; j < 8; ++j) {
-            if(j == 0){
+            if (j == 0) {
                 std::cout << std::endl;
             }
 
-            if(pieceArr[(8 * i) + j] != nullptr) {
+            if (pieceArr[(8 * i) + j] != nullptr) {
 
                 std::cout << pieceArr[(8 * i) + j]->pieceChar();
 
@@ -135,11 +140,47 @@ void chessBoard::printBoard() {
 
             }
 
-
+            std::cout << " ";
         }
 
 
 
+    }
+
+    std::cout  << std::endl  << std::endl << "to move: ";
+
+    if (whiteToMove) {
+        std::cout << "white" << std::endl;
+    } else {
+        std::cout << "black" << std::endl;
+    }
+
+
+    std::cout << "en passant target: ";
+
+    if(enPassantTarget == -1) {
+        std::cout << "none" << std::endl;
+    } else {
+
+        std::cout << enPassantTarget << std::endl;
 
     }
+
+    std::cout << "castles available: " << std::endl;
+
+    if(canCastle[0])
+        std::cout << "  - white queenside" << std::endl;
+
+    if(canCastle[1])
+        std::cout << "  - white kingside" << std::endl;
+
+    if(canCastle[2])
+        std::cout << "  - black queenside" << std::endl;
+
+    if(canCastle[3])
+        std::cout << "  - black kingside" << std::endl;
+
+
 }
+
+

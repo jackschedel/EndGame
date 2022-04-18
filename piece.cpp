@@ -29,7 +29,7 @@ char piece::pieceChar() {
             toReturn = 'K';
     }
 
-    if(color == white){
+    if(color == black){
         toReturn = std::tolower(toReturn);
     }
 
