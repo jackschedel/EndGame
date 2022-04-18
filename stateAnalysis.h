@@ -1,0 +1,10 @@
+#ifndef ENDGAME_STATEANALYSIS_H
+#define ENDGAME_STATEANALYSIS_H
+
+
+class stateAnalysis {
+
+};
+
+
+#endif //ENDGAME_STATEANALYSIS_H
