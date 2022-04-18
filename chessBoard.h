@@ -25,6 +25,8 @@ public:
 
     int enPassantTarget = -1;
 
+    int stringToPosition(std::string givenString);
+
 
     piece* pieceArr[64] {nullptr};
 

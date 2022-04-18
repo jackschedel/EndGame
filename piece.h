@@ -2,7 +2,7 @@
 #include <cctype>
 #include <locale>
 #include <vector>
-#include "pieceMove.h"
+class pieceMove;
 class chessBoard;
 
 #ifndef ENDGAME_PIECE_H
@@ -23,7 +23,7 @@ public:
 
     std::vector<pieceMove>* generatePseudoLegalMoves(int position, chessBoard* board);
 
-
+    void pseudoLegalPrint(int position, chessBoard* board);
 };
 
 

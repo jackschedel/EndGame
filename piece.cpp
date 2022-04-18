@@ -1,5 +1,7 @@
 #include "piece.h"
 #include "chessBoard.h"
+#include "pieceMove.h"
+
 
 piece::piece(enum type type, enum color color){
     this->type = type;
@@ -505,4 +507,17 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
     //TODO: castling
 
     return toReturn;
+}
+
+void piece::pseudoLegalPrint(int position, chessBoard *board) {
+
+    auto moveVector = generatePseudoLegalMoves(position, board);
+
+    std::cout << position << ":   " << this->type << "-" << this->color << std::endl;
+
+    for (int i = 0; i < moveVector->size(); ++i) {
+        (*moveVector)[i].printMove();
+    }
+
+
 }

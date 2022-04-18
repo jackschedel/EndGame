@@ -20,7 +20,10 @@ int main() {
      */
 
 
-
-
     board.printBoard();
+
+    int tempPosition = board.stringToPosition("G2");
+
+    board.pieceArr[tempPosition]->pseudoLegalPrint(tempPosition, &board);
+
 }

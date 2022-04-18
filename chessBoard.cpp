@@ -118,7 +118,6 @@ void chessBoard::boardInit(std::string fenString) {
     }
 
 
-
 }
 
 void chessBoard::printBoard() {
@@ -181,6 +180,17 @@ void chessBoard::printBoard() {
         std::cout << "  - black kingside" << std::endl;
 
 
+}
+
+int chessBoard::stringToPosition(std::string givenString) {
+
+    char rank = std::tolower(givenString[0]);
+
+    char file = givenString[1];
+
+    rank -= 97;
+
+    return 8 * (file - 49) + rank;
 }
 
 
