@@ -12,6 +12,10 @@ private:
 
 
 public:
+    bool whiteInCheck = false;
+
+    bool blackInCheck = false;
+
     bool whiteToMove = true;
 
     bool canCastle[4] = {false};
@@ -25,12 +29,16 @@ public:
 
     int enPassantTarget = -1;
 
+    int stringToPosition(std::string givenString);
+
 
     piece* pieceArr[64] {nullptr};
 
     void boardInit(std::string fenString = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
 
     void printBoard();
+
+    std::string positionToString(int position);
 };
 
 

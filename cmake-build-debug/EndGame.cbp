@@ -8,96 +8,96 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug"/>
+				<Option working_dir="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug"/>
+				<Option working_dir="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="EndGame">
-				<Option output="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/EndGame.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug"/>
+				<Option output="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/EndGame.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/backward"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 EndGame"/>
-					<CompileFile command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 EndGame"/>
+					<CompileFile command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="EndGame/fast">
-				<Option output="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/EndGame.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug"/>
+				<Option output="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/EndGame.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/backward"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 EndGame/fast"/>
-					<CompileFile command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 EndGame/fast"/>
+					<CompileFile command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug"/>
+				<Option working_dir="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe -f &quot;D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/chessBoard.cpp">
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.cpp">
 			<Option target="EndGame"/>
 		</Unit>
-		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/chessBoard.h">
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h">
 			<Option target="EndGame"/>
 		</Unit>
-		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/main.cpp">
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/main.cpp">
 			<Option target="EndGame"/>
 		</Unit>
-		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/piece.cpp">
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.cpp">
 			<Option target="EndGame"/>
 		</Unit>
-		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/piece.h">
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h">
 			<Option target="EndGame"/>
 		</Unit>
-		<Unit filename="C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/CMakeLists.txt">
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

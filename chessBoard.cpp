@@ -4,7 +4,7 @@ void chessBoard::boardInit(std::string fenString) {
 
     int initState = 0;
 
-    int currSquare = 0;
+    int currSquare = 56;
 
     char tempLower;
 
@@ -18,7 +18,9 @@ void chessBoard::boardInit(std::string fenString) {
 
     piece* newPiece = nullptr;
 
+
     for (int i = 0; i < fenString.size(); ++i) {
+
 
         if(fenString[i] == ' ') {
             initState++;
@@ -70,6 +72,8 @@ void chessBoard::boardInit(std::string fenString) {
                 currSquare++;
             } else if(fenString[i] != '/') {
                 currSquare += (fenString[i] - 48);
+            } else {
+                currSquare -= 16;
             }
 
         } else if(initState == 1) {
@@ -86,16 +90,16 @@ void chessBoard::boardInit(std::string fenString) {
 
             switch(fenString[i]) {
                 case 'q':
-                    canCastle[0] = true;
-                    break;
-                case 'k':
-                    canCastle[1] = true;
-                    break;
-                case 'Q':
                     canCastle[2] = true;
                     break;
-                case 'K':
+                case 'k':
                     canCastle[3] = true;
+                    break;
+                case 'Q':
+                    canCastle[0] = true;
+                    break;
+                case 'K':
+                    canCastle[1] = true;
             }
 
         } else if(initState == 3) {
@@ -118,13 +122,14 @@ void chessBoard::boardInit(std::string fenString) {
     }
 
 
+    // TODO: run check for whether side is in check
 
 }
 
 void chessBoard::printBoard() {
 
 
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 7; i >= 0; --i) {
 
         for (int j = 0; j < 8; ++j) {
             if (j == 0) {
@@ -183,4 +188,26 @@ void chessBoard::printBoard() {
 
 }
 
+int chessBoard::stringToPosition(std::string givenString) {
+
+    char rank = std::tolower(givenString[0]);
+
+    char file = givenString[1];
+
+    rank -= 97;
+
+    return 8 * (file - 49) + rank;
+}
+
+std::string chessBoard::positionToString(int position){
+
+    std::string tempReturn;
+
+    tempReturn += char((position % 8) + 65);
+
+    tempReturn += ((position / 8) + 49);
+
+    return tempReturn;
+
+}
 
