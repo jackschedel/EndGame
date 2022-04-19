@@ -1,4 +1,16 @@
-"D:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Jack\Documents\School\UF Semester 2\Data Structures\Project3\EndGame"
+"C:\Program Files (x86)\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame"
+-- The C compiler identification is GNU 11.2.0
+-- The CXX compiler identification is GNU 11.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug
+-- Build files have been written to: D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug

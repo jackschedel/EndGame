@@ -11,6 +11,13 @@ int main() {
 
 
     board.boardInit("r2q1rk1/1bp1bppp/p1np1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - d3 0 10");
+
+    /* bishop testing
+    board.pieceArr[35] = new piece(piece::bishop, piece::white);
+
+    board.pieceArr[21] = new piece(piece::pawn, piece::black);
+     */
+
     /*
      * "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - d3 0 10"
      * advanced FEN with en passant for testing ^
@@ -25,10 +32,13 @@ int main() {
 
     std::cout << std::endl;
 
-    int tempPosition = board.stringToPosition("B1");
+    for (int i = 0; i < 64; ++i) {
+        if(board.pieceArr[i] != nullptr) {
+            board.pieceArr[i]->pseudoLegalPrint(i, &board);
+            std::cout << std::endl;
+        }
+    }
 
-
-    board.pieceArr[tempPosition]->pseudoLegalPrint(tempPosition, &board);
 
 
 }

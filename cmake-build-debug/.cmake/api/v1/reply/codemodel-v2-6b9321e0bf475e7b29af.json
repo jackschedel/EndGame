@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug",
-		"source" : "C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame"
+		"build" : "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug",
+		"source" : "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 2
 	}
 }

@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/addr2line.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/ar.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/ar.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug"
+			"value" : "d:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "21"
+			"value" : "20"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "2"
 		},
 		{
 			"name" : "CMAKE_CODEBLOCKS_COMPILER_ID",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe"
+			"value" : "C:/Program Files (x86)/JetBrains/CLion 2021.2.2/bin/cmake/win/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -167,7 +167,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cpack.exe"
+			"value" : "C:/Program Files (x86)/JetBrains/CLion 2021.2.2/bin/cmake/win/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -179,7 +179,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/ctest.exe"
+			"value" : "C:/Program Files (x86)/JetBrains/CLion 2021.2.2/bin/cmake/win/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -195,7 +195,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/g++.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/g++.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -211,7 +211,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/gcc-ar.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -227,7 +227,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/gcc-ranlib.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -339,7 +339,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/gcc.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -355,7 +355,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/gcc-ar.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -371,7 +371,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/gcc-ranlib.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -470,6 +470,18 @@
 			"value" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32"
 		},
 		{
+			"name" : "CMAKE_DEPENDS_USE_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "FALSE"
+		},
+		{
 			"name" : "CMAKE_DLLTOOL",
 			"properties" : 
 			[
@@ -483,7 +495,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/dlltool.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/dlltool.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -611,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
+			"value" : "c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/x86_64-w64-mingw32;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/backward;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/include;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
 		},
 		{
 			"name" : "CMAKE_EXTRA_GENERATOR_C_SYSTEM_DEFINED_MACROS",
@@ -635,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
+			"value" : "c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/include;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;c:\\programdata\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -707,7 +719,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame"
+			"value" : "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -735,7 +747,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/ld.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -747,11 +759,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "make program"
+					"value" : "Path to a program."
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -847,7 +859,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/nm.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -875,7 +887,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/objcopy.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -891,7 +903,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/objdump.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -955,7 +967,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/ranlib.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -971,7 +983,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/windres.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/windres.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -1079,7 +1091,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/readelf.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1091,7 +1103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21"
+			"value" : "C:/Program Files (x86)/JetBrains/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1299,7 +1311,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/strip.exe"
+			"value" : "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/strip.exe"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1327,19 +1339,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame/cmake-build-debug"
-		},
-		{
-			"name" : "EndGame_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
+			"value" : "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug"
 		},
 		{
 			"name" : "EndGame_SOURCE_DIR",
@@ -1351,7 +1351,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Jack/Documents/School/UF Semester 2/Data Structures/Project3/EndGame"
+			"value" : "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame"
 		}
 	],
 	"kind" : "cache",
