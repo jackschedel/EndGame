@@ -12,6 +12,10 @@ private:
 
 
 public:
+    bool whiteInCheck = false;
+
+    bool blackInCheck = false;
+
     bool whiteToMove = true;
 
     bool canCastle[4] = {false};

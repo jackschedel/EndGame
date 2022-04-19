@@ -90,16 +90,16 @@ void chessBoard::boardInit(std::string fenString) {
 
             switch(fenString[i]) {
                 case 'q':
-                    canCastle[0] = true;
-                    break;
-                case 'k':
-                    canCastle[1] = true;
-                    break;
-                case 'Q':
                     canCastle[2] = true;
                     break;
-                case 'K':
+                case 'k':
                     canCastle[3] = true;
+                    break;
+                case 'Q':
+                    canCastle[0] = true;
+                    break;
+                case 'K':
+                    canCastle[1] = true;
             }
 
         } else if(initState == 3) {
@@ -121,6 +121,8 @@ void chessBoard::boardInit(std::string fenString) {
 
     }
 
+
+    // TODO: run check for whether side is in check
 
 }
 

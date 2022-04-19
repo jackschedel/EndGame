@@ -661,6 +661,50 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
     }
 
+    if(type == rook) {
+
+        //TODO: relies on blackIncheck and whiteIncheck values that are never changed
+
+        // TODO: check if any in between squares are under attack
+
+        if(color == black && !(board->blackInCheck)) {
+
+            if(position == 56 && board->canCastle[2]) {
+                if(board->pieceArr[57] == nullptr && board->pieceArr[58] == nullptr && board->pieceArr[59] == nullptr) {
+
+                    toReturn->push_back(pieceMove(this, position, 59, pieceMove::queensideCastle));
+                }
+            }
+
+            if(position == 63 && board->canCastle[3]) {
+
+                if(board->pieceArr[61] == nullptr && board->pieceArr[62] == nullptr) {
+                    toReturn->push_back(pieceMove(this, position, 61, pieceMove::kingsideCastle));
+                }
+            }
+
+        }
+
+        if(color == white && !(board->whiteInCheck)) {
+
+            if(position == 0 && board->canCastle[0]) {
+                if(board->pieceArr[1] == nullptr && board->pieceArr[2] == nullptr && board->pieceArr[3] == nullptr) {
+                    toReturn->push_back(pieceMove(this, position, 3, pieceMove::queensideCastle));
+                }
+            }
+
+            if(position == 7 && board->canCastle[1]) {
+
+                if(board->pieceArr[5] == nullptr && board->pieceArr[6] == nullptr) {
+                    toReturn->push_back(pieceMove(this, position, 5, pieceMove::kingsideCastle));
+                }
+
+            }
+        }
+
+
+    }
+
     //TODO: castling
 
     return toReturn;

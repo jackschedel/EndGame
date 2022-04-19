@@ -16,13 +16,11 @@ iostream
 vector
 -
 
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.cpp
-piece.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
+D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/main.cpp
+iostream
+-
 chessBoard.h
 D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
-pieceMove.cpp
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.cpp
 
 D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
 string
@@ -33,16 +31,4 @@ locale
 -
 vector
 -
-
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.cpp
-pieceMove.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
-piece.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
-iostream
--
-chessBoard.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
-
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
 
