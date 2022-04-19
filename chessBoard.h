@@ -33,6 +33,8 @@ public:
     void boardInit(std::string fenString = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
 
     void printBoard();
+
+    std::string positionToString(int position);
 };
 
 

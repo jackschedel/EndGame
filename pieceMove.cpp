@@ -1,17 +1,28 @@
 #include "pieceMove.h"
 #include "piece.h"
 #include <iostream>
-void pieceMove::printMove() {
-    std::cout << to << " ";
+#include "chessBoard.h"
 
-    if(capturing != -1){
+void pieceMove::printMove(chessBoard* board) {
+    std::cout << board->positionToString(to) << " ";
+
+    if(this->capturing != -1){
         std::cout << "capturing ";
     }
 
-    if(specialMove != na){
-        std::cout << specialMove;
+    if(this->specialMove != none){
+        std::cout << specialMoveToString();
     }
 
     std::cout << std::endl;
 
 }
+
+std::string pieceMove::specialMoveToString() {
+    return nameDefSpecialMove[specialMove];
+}
+
+std::string pieceMove::upgradeTypeToString() {
+    return nameDefUpgradeType[upgradeType];
+}
+

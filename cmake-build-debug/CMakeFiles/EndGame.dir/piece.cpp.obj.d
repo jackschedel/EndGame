@@ -154,4 +154,5 @@ CMakeFiles/EndGame.dir/piece.cpp.obj: \
  D:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
  D:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
  D:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
+ C:\Users\Jack\Documents\School\UF\ Semester\ 2\Data\ Structures\Project3\EndGame\pieceMove.cpp \
  C:\Users\Jack\Documents\School\UF\ Semester\ 2\Data\ Structures\Project3\EndGame\pieceMove.h

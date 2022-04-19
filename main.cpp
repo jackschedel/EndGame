@@ -22,8 +22,19 @@ int main() {
 
     board.printBoard();
 
-    int tempPosition = board.stringToPosition("G2");
+
+    std::cout << std::endl;
+
+    int tempPosition = board.stringToPosition("B1");
+
 
     board.pieceArr[tempPosition]->pseudoLegalPrint(tempPosition, &board);
 
+
 }
+
+
+
+
+
+

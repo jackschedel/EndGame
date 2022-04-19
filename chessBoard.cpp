@@ -4,7 +4,7 @@ void chessBoard::boardInit(std::string fenString) {
 
     int initState = 0;
 
-    int currSquare = 0;
+    int currSquare = 56;
 
     char tempLower;
 
@@ -18,7 +18,9 @@ void chessBoard::boardInit(std::string fenString) {
 
     piece* newPiece = nullptr;
 
+
     for (int i = 0; i < fenString.size(); ++i) {
+
 
         if(fenString[i] == ' ') {
             initState++;
@@ -70,6 +72,8 @@ void chessBoard::boardInit(std::string fenString) {
                 currSquare++;
             } else if(fenString[i] != '/') {
                 currSquare += (fenString[i] - 48);
+            } else {
+                currSquare -= 16;
             }
 
         } else if(initState == 1) {
@@ -123,7 +127,7 @@ void chessBoard::boardInit(std::string fenString) {
 void chessBoard::printBoard() {
 
 
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 7; i >= 0; --i) {
 
         for (int j = 0; j < 8; ++j) {
             if (j == 0) {
@@ -193,4 +197,15 @@ int chessBoard::stringToPosition(std::string givenString) {
     return 8 * (file - 49) + rank;
 }
 
+std::string chessBoard::positionToString(int position){
+
+    std::string tempReturn;
+
+    tempReturn += char((position % 8) + 65);
+
+    tempReturn += ((position / 8) + 49);
+
+    return tempReturn;
+
+}
 

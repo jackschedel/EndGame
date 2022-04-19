@@ -10,6 +10,10 @@ class chessBoard;
 
 
 class piece {
+private:
+    std::string nameDefType[6] = {"pawn", "knight", "bishop", "rook", "queen", "king"};
+    std::string nameDefColor[2] = {"white", "black"};
+
 public:
     enum type {pawn, knight, bishop, rook, queen, king};
     enum color {white, black};
@@ -24,6 +28,10 @@ public:
     std::vector<pieceMove>* generatePseudoLegalMoves(int position, chessBoard* board);
 
     void pseudoLegalPrint(int position, chessBoard* board);
+
+    std::string typeToString();
+
+    std::string colorToString();
 };
 
 
