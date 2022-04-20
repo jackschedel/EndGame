@@ -18,6 +18,10 @@ public:
 
     bool whiteToMove = true;
 
+    int whiteKingPos = -1;
+
+    int blackKingPos = -1;
+
     bool canCastle[4] = {false};
 
     /*
@@ -31,6 +35,7 @@ public:
 
     int stringToPosition(std::string givenString);
 
+    bool isInCheck(enum piece::color colorToCheck, int position = -1);
 
     piece* pieceArr[64] {nullptr};
 

@@ -65,6 +65,16 @@ void chessBoard::boardInit(std::string fenString) {
                 }
 
 
+                if(currType == piece::king) {
+
+                    if(currColor == piece::black){
+                        blackKingPos = currSquare;
+                    }else {
+                        whiteKingPos = currSquare;
+                    }
+
+                }
+
                 newPiece = new piece(currType, currColor);
 
                 pieceArr[currSquare] = newPiece;
@@ -209,5 +219,368 @@ std::string chessBoard::positionToString(int position){
 
     return tempReturn;
 
+}
+
+bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
+
+    if(position == -1) {
+
+        if (colorToCheck == piece::white) {
+            position = whiteKingPos;
+        } else {
+            position = blackKingPos;
+        }
+    }
+
+
+
+    // knight check
+    int newPosition = 0;
+
+    if( (position % 8) > 0 && (position / 8)  > 1) {
+
+        newPosition = position - 17;
+
+        if (newPosition >= 0 && newPosition < 64) {
+
+            if (pieceArr[newPosition] != nullptr)
+                if (pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::knight)
+                    return true;
+
+
+        }
+    }
+
+    if( (position % 8) < 7 && (position / 8)  > 1) {
+        newPosition = position - 15;
+        if (newPosition >= 0 && newPosition < 64) {
+            if (pieceArr[newPosition] != nullptr)
+                if (pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::knight)
+                    return true;
+
+
+        }
+    }
+
+    if( (position % 8) > 1 && (position / 8)  > 0) {
+        newPosition = position - 10;
+        if (newPosition >= 0 && newPosition < 64) {
+
+            if (pieceArr[newPosition] != nullptr)
+                if (pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::knight)
+                    return true;
+
+        }
+    }
+
+    if( (position % 8) < 6 && (position / 8)  > 0) {
+        newPosition = position - 6;
+        if (newPosition >= 0 && newPosition < 64) {
+
+            if (pieceArr[newPosition] != nullptr)
+                if (pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::knight)
+                    return true;
+
+        }
+    }
+
+    if( (position % 8) > 1 && (position / 8)  < 7) {
+        newPosition = position + 6;
+        if (position >= 0 && position < 64) {
+
+            if (pieceArr[newPosition] != nullptr)
+                if (pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::knight)
+                    return true;
+
+        }
+    }
+
+    if( (position % 8) < 6 && (position / 8)  < 7) {
+        newPosition = position + 10;
+        if (position >= 0 && position < 64) {
+
+
+            if (pieceArr[newPosition] != nullptr)
+                if (pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::knight)
+                    return true;
+
+        }
+    }
+
+    if( (position % 8) > 0 && (position / 8)  < 6) {
+        newPosition = position + 15;
+        if (position >= 0 && position < 64) {
+            if (pieceArr[newPosition] != nullptr)
+                if (pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::knight)
+                    return true;
+
+        }
+    }
+
+    if( (position % 8) < 7 && (position / 8)  < 6 ){
+        newPosition = position + 17;
+        if (position >= 0 && position < 64) {
+            if (pieceArr[newPosition] != nullptr)
+                if (pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::knight)
+                    return true;
+
+        }
+    }
+
+
+
+    // pawn check
+    if(colorToCheck == piece::white) {
+
+        // +7 and +9
+        if(position / 8 < 7) {
+
+            // pawn to right, +9
+            if(position % 8 != 7) {
+
+                newPosition = position + 9;
+
+                if(pieceArr[newPosition] != nullptr && pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::pawn){
+                    return true;
+                }
+
+            }
+
+            // pawn to left, +7
+            if(position % 8 != 0) {
+
+                newPosition = position + 7;
+
+                if(pieceArr[newPosition] != nullptr && pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::pawn){
+                    return true;
+                }
+
+            }
+
+        }
+
+    } else {
+
+        // -7 and -9
+        if(position / 8 > 0) {
+
+            // pawn to right, -7
+            if(position % 8 != 7) {
+
+                newPosition = position - 7;
+
+                if(pieceArr[newPosition] != nullptr && pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::pawn){
+                    return true;
+                }
+
+            }
+
+            // pawn to left, -9
+            if(position % 8 != 0) {
+                newPosition = position - 9;
+
+                if(pieceArr[newPosition] != nullptr && pieceArr[newPosition]->color != colorToCheck && pieceArr[newPosition]->type == piece::pawn){
+                    return true;
+                }
+
+            }
+        }
+    }
+
+
+
+    // bishop + queen diag check
+    int tempPosition = position;
+    int tempPosition2 = position;
+
+    tempPosition -= 9;
+    // down left
+    while (tempPosition >= 0 && tempPosition < 64) {
+        if( (tempPosition2 % 8) > 0 && (tempPosition2 / 8)  > 0) {
+
+            if (pieceArr[tempPosition] != nullptr) {
+                if (pieceArr[tempPosition]->color != colorToCheck) {
+                    if (pieceArr[newPosition]->type == piece::bishop || pieceArr[newPosition]->type == piece::queen) {
+                        return true;
+                    }
+                } else {
+                    break;
+                }
+            }
+
+            tempPosition -= 9;
+            tempPosition2 -= 9;
+        }else{
+            break;
+        }
+    }
+
+    tempPosition2 = position;
+    tempPosition = position;
+    tempPosition -= 7;
+    // down right
+    while (tempPosition >= 0 && tempPosition < 64) {
+        if( (tempPosition2 % 8) < 7 && (tempPosition2 / 8)  > 0) {
+
+            if (pieceArr[tempPosition] != nullptr) {
+                if (pieceArr[tempPosition]->color != colorToCheck) {
+                    if (pieceArr[newPosition]->type == piece::bishop || pieceArr[newPosition]->type == piece::queen) {
+                        return true;
+                    }
+                } else {
+                    break;
+                }
+            }
+
+            tempPosition -= 7;
+            tempPosition2 -= 7;
+        }else{
+            break;
+        }
+    }
+
+    tempPosition2 = position;
+    tempPosition = position;
+    tempPosition += 7;
+    // up left
+    while (tempPosition >= 0 && tempPosition < 64) {
+        if( (tempPosition2 % 8) > 0 && (tempPosition2 / 8)  < 7) {
+
+            if (pieceArr[tempPosition] != nullptr) {
+                if (pieceArr[tempPosition]->color != colorToCheck) {
+                    if (pieceArr[newPosition]->type == piece::bishop || pieceArr[newPosition]->type == piece::queen) {
+                        return true;
+                    }
+                } else {
+                    break;
+                }
+            }
+
+            tempPosition += 7;
+            tempPosition2 += 7;
+        }else{
+            break;
+        }
+    }
+
+    tempPosition2 = position;
+    tempPosition = position;
+    tempPosition += 9;
+    // up right
+    while (tempPosition >= 0 && tempPosition < 64) {
+        if( (tempPosition2 % 8) < 7 && (tempPosition2 / 8)  < 7) {
+
+            if (pieceArr[tempPosition] != nullptr) {
+                if (pieceArr[tempPosition]->color != colorToCheck) {
+                    if (pieceArr[newPosition]->type == piece::bishop || pieceArr[newPosition]->type == piece::queen) {
+
+                        return true;
+                    }
+                } else {
+                    break;
+                }
+            }
+
+            tempPosition += 9;
+            tempPosition2 += 9;
+        }else{
+            break;
+        }
+    }
+
+
+
+    // rook + queen rank/file check
+
+    tempPosition = position;
+    tempPosition--;
+    // left
+    while(tempPosition >= 0 && tempPosition < 64) {
+
+        if (pieceArr[tempPosition] != nullptr) {
+            if (pieceArr[tempPosition]->color != colorToCheck) {
+                if (pieceArr[tempPosition]->type == piece::rook || pieceArr[tempPosition]->type == piece::queen) {
+
+                    return true;
+                }
+            } else {
+                break;
+            }
+        }
+
+        if(tempPosition % 8 == 0)
+            break;
+
+        tempPosition--;
+    }
+
+    tempPosition = position;
+    tempPosition++;
+    // right
+    while(tempPosition >= 0 && tempPosition < 64) {
+
+        if (pieceArr[tempPosition] != nullptr) {
+            if (pieceArr[tempPosition]->color != colorToCheck) {
+                if (pieceArr[tempPosition]->type == piece::rook || pieceArr[tempPosition]->type == piece::queen) {
+
+                    return true;
+                }
+            } else {
+                break;
+            }
+        }
+
+        if(tempPosition % 8 == 7)
+            break;
+
+        tempPosition++;
+    }
+
+    tempPosition = position;
+    tempPosition += 8;
+    // up
+    while(tempPosition >= 0 && tempPosition < 64) {
+
+        if (pieceArr[tempPosition] != nullptr) {
+            if (pieceArr[tempPosition]->color != colorToCheck) {
+                if (pieceArr[tempPosition]->type == piece::rook || pieceArr[tempPosition]->type == piece::queen) {
+
+                    return true;
+                }
+            } else {
+                break;
+            }
+        }
+
+        if(tempPosition / 8 != 7)
+            break;
+
+        tempPosition += 8;
+    }
+
+    tempPosition = position;
+    tempPosition -= 8;
+    // down
+    while(tempPosition >= 0 && tempPosition < 64) {
+
+        if (pieceArr[tempPosition] != nullptr) {
+            if (pieceArr[tempPosition]->color != colorToCheck) {
+                if (pieceArr[tempPosition]->type == piece::rook || pieceArr[tempPosition]->type == piece::queen) {
+
+                    return true;
+                }
+            } else {
+                break;
+            }
+        }
+
+        if(tempPosition / 8 != 7)
+            break;
+
+        tempPosition -= 8;
+    }
+
+
+    return false;
 }
 
