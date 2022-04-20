@@ -726,24 +726,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
     return toReturn;
 }
 
-void piece::pseudoLegalPrint(int position, chessBoard *board, std::vector<pieceMove>* moveVector) {
 
-    std::cout << colorToString() << " " << typeToString() << ": " << board->positionToString(position) <<std::endl;
-
-    for (int i = 0; i < moveVector->size(); ++i) {
-        std::cout << " - ";
-        (*moveVector)[i].printMove(board);
-
-    }
-
-    if(moveVector->size() == 0) {
-        std::cout << "no legal moves" << std::endl;
-
-    }
-    std::cout << std::endl;
-
-
-}
 
 std::string piece::typeToString() {
 

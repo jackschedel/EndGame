@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.cpp
+chessBoard.h
+D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
+pieceMove.h
+D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
+piece.h
+D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
+prettyprint.hpp
+D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/prettyprint.hpp
+
 D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
 cctype
 -
@@ -15,18 +25,6 @@ vector
 -
 string
 -
-piece.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
-
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/main.cpp
-iostream
--
-stateAnalysis.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.h
-chessBoard.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
-pieceMove.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
 piece.h
 D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
 
@@ -42,9 +40,25 @@ vector
 
 D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
 
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.h
-vector
+D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/prettyprint.hpp
+cstddef
 -
-chessBoard.h
-D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
+iterator
+-
+memory
+-
+ostream
+-
+set
+-
+tuple
+-
+type_traits
+-
+unordered_set
+-
+utility
+-
+valarray
+-
 

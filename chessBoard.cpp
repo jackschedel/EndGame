@@ -785,4 +785,67 @@ bool chessBoard::executeMove(pieceMove* move) {
     return true;
 }
 
+std::vector<pieceMove>* chessBoard::genAllPseudoLegalMoves() {
+
+    auto PLmoves = new std::vector<pieceMove>;
+
+    for (int i = 0; i < 64; ++i) {
+
+        if(pieceArr[i] != nullptr) {
+            if((whiteToMove && pieceArr[i]->color == piece::white)  ||  (!whiteToMove && pieceArr[i]->color == piece::black)){
+
+                std::vector<pieceMove>* tempPLMoves = pieceArr[i]->generatePseudoLegalMoves(i, this);
+
+
+                for (int j = 0; j < tempPLMoves->size(); ++j) {
+                    PLmoves->push_back((*tempPLMoves)[j]);
+
+                }
+
+
+            }
+
+
+        }
+    }
+
+
+    return PLmoves;
+}
+
+
+void chessBoard::pseudoLegalPrint(std::vector<pieceMove>* PSMoveArr) {
+
+
+    for (int i = 0; i < PSMoveArr->size(); ++i) {
+
+
+
+        std::cout << (*PSMoveArr)[i].piece->colorToString()  << " " << (*PSMoveArr)[i].piece->typeToString();
+        std:: cout << " " << positionToString((*PSMoveArr)[i].from) << " to ";
+        std:: cout << positionToString((*PSMoveArr)[i].to);
+
+        std::string specialMove = (*PSMoveArr)[i].specialMoveToString();
+
+        if((*PSMoveArr)[i].capturing != -1) {
+            std:: cout << " capturing ";
+        }
+
+        if(specialMove != "none")
+            std:: cout << " (" << specialMove << ") ";
+
+
+
+
+        std::cout << std::endl;
+
+
+
+    }
+
+
+
+}
+
+
 

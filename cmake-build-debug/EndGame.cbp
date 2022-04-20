@@ -88,6 +88,12 @@
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h">
 			<Option target="EndGame"/>
 		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/decisionTreeNode.cpp">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/decisionTreeNode.h">
+			<Option target="EndGame"/>
+		</Unit>
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/main.cpp">
 			<Option target="EndGame"/>
 		</Unit>

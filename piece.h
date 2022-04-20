@@ -28,8 +28,6 @@ public:
 
     std::vector<pieceMove>* generatePseudoLegalMoves(int position, chessBoard* board);
 
-    void pseudoLegalPrint(int position, chessBoard* board, std::vector<pieceMove>* moveVector);
-
     std::string typeToString();
 
     std::string colorToString();

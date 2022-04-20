@@ -59,13 +59,11 @@ public:
 
     bool executeMove(pieceMove *move);
 
+    std::vector<pieceMove>* genAllPseudoLegalMoves();
 
-    ~chessBoard() {
+    void pseudoLegalPrint(std::vector<pieceMove>* PSMoveArr);
 
 
     };
-
-
-};
 
 #endif //ENDGAME_CHESSBOARD_H

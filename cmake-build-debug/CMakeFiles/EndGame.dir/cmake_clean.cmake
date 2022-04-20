@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/EndGame.dir/chessBoard.cpp.obj"
+  "CMakeFiles/EndGame.dir/decisionTreeNode.cpp.obj"
   "CMakeFiles/EndGame.dir/main.cpp.obj"
   "CMakeFiles/EndGame.dir/piece.cpp.obj"
   "CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj"

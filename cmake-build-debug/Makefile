@@ -152,6 +152,30 @@ chessBoard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/chessBoard.cpp.s
 .PHONY : chessBoard.cpp.s
 
+decisionTreeNode.obj: decisionTreeNode.cpp.obj
+.PHONY : decisionTreeNode.obj
+
+# target to build an object file
+decisionTreeNode.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/decisionTreeNode.cpp.obj
+.PHONY : decisionTreeNode.cpp.obj
+
+decisionTreeNode.i: decisionTreeNode.cpp.i
+.PHONY : decisionTreeNode.i
+
+# target to preprocess a source file
+decisionTreeNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/decisionTreeNode.cpp.i
+.PHONY : decisionTreeNode.cpp.i
+
+decisionTreeNode.s: decisionTreeNode.cpp.s
+.PHONY : decisionTreeNode.s
+
+# target to generate assembly for a file
+decisionTreeNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/decisionTreeNode.cpp.s
+.PHONY : decisionTreeNode.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -236,6 +260,9 @@ help:
 	@echo ... chessBoard.obj
 	@echo ... chessBoard.i
 	@echo ... chessBoard.s
+	@echo ... decisionTreeNode.obj
+	@echo ... decisionTreeNode.i
+	@echo ... decisionTreeNode.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

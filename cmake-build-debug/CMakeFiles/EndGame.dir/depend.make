@@ -7,8 +7,15 @@ CMakeFiles/EndGame.dir/chessBoard.cpp.obj: \
  ../piece.h \
  ../pieceMove.h \
  ../prettyprint.hpp
+CMakeFiles/EndGame.dir/decisionTreeNode.cpp.obj: \
+ ../chessBoard.h \
+ ../decisionTreeNode.cpp \
+ ../decisionTreeNode.h \
+ ../piece.h \
+ ../pieceMove.h
 CMakeFiles/EndGame.dir/main.cpp.obj: \
  ../chessBoard.h \
+ ../decisionTreeNode.h \
  ../main.cpp \
  ../piece.h \
  ../pieceMove.h \
