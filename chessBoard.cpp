@@ -400,7 +400,7 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
 
             if (pieceArr[tempPosition] != nullptr) {
                 if (pieceArr[tempPosition]->color != colorToCheck) {
-                    if (pieceArr[newPosition]->type == piece::bishop || pieceArr[newPosition]->type == piece::queen) {
+                    if (pieceArr[tempPosition]->type == piece::bishop || pieceArr[tempPosition]->type == piece::queen) {
                         return true;
                     }
                 } else {
@@ -424,7 +424,7 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
 
             if (pieceArr[tempPosition] != nullptr) {
                 if (pieceArr[tempPosition]->color != colorToCheck) {
-                    if (pieceArr[newPosition]->type == piece::bishop || pieceArr[newPosition]->type == piece::queen) {
+                    if (pieceArr[tempPosition]->type == piece::bishop || pieceArr[tempPosition]->type == piece::queen) {
                         return true;
                     }
                 } else {
@@ -448,7 +448,7 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
 
             if (pieceArr[tempPosition] != nullptr) {
                 if (pieceArr[tempPosition]->color != colorToCheck) {
-                    if (pieceArr[newPosition]->type == piece::bishop || pieceArr[newPosition]->type == piece::queen) {
+                    if (pieceArr[tempPosition]->type == piece::bishop || pieceArr[tempPosition]->type == piece::queen) {
                         return true;
                     }
                 } else {
@@ -472,7 +472,7 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
 
             if (pieceArr[tempPosition] != nullptr) {
                 if (pieceArr[tempPosition]->color != colorToCheck) {
-                    if (pieceArr[newPosition]->type == piece::bishop || pieceArr[newPosition]->type == piece::queen) {
+                    if (pieceArr[tempPosition]->type == piece::bishop || pieceArr[tempPosition]->type == piece::queen) {
 
                         return true;
                     }
@@ -495,7 +495,7 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
     tempPosition = position;
     tempPosition--;
     // left
-    while(tempPosition >= 0 && tempPosition < 64) {
+    while(tempPosition % 8 != 7 && tempPosition >= 0 && tempPosition < 64) {
 
         if (pieceArr[tempPosition] != nullptr) {
             if (pieceArr[tempPosition]->color != colorToCheck) {
@@ -507,9 +507,6 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
                 break;
             }
         }
-
-        if(tempPosition % 8 == 0)
-            break;
 
         tempPosition--;
     }
@@ -517,7 +514,7 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
     tempPosition = position;
     tempPosition++;
     // right
-    while(tempPosition >= 0 && tempPosition < 64) {
+    while(tempPosition % 8 != 0 && tempPosition >= 0 && tempPosition < 64) {
 
         if (pieceArr[tempPosition] != nullptr) {
             if (pieceArr[tempPosition]->color != colorToCheck) {
@@ -529,9 +526,6 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
                 break;
             }
         }
-
-        if(tempPosition % 8 == 7)
-            break;
 
         tempPosition++;
     }
@@ -552,8 +546,6 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
             }
         }
 
-        if(tempPosition / 8 != 7)
-            break;
 
         tempPosition += 8;
     }
@@ -573,9 +565,6 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
                 break;
             }
         }
-
-        if(tempPosition / 8 != 7)
-            break;
 
         tempPosition -= 8;
     }

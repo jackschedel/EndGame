@@ -497,7 +497,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
         int tempPosition = position;
         tempPosition--;
         // left
-        while(tempPosition >= 0 && tempPosition < 64) {
+        while(tempPosition % 8 != 7 && tempPosition >= 0 && tempPosition < 64) {
             if(board->pieceArr[tempPosition] != nullptr)
                 if(board->pieceArr[tempPosition]->color == this->color)
                     break;
@@ -512,9 +512,6 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
 
             toReturn->push_back(pieceMove(this, position, tempPosition));
-
-            if(tempPosition % 8 == 0)
-                break;
 
             tempPosition--;
         }
@@ -522,7 +519,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
         tempPosition = position;
         tempPosition++;
         // right
-        while(tempPosition >= 0 && tempPosition < 64) {
+        while(tempPosition % 8 != 0 && tempPosition >= 0 && tempPosition < 64) {
             if(board->pieceArr[tempPosition] != nullptr)
                 if(board->pieceArr[tempPosition]->color == this->color)
                     break;
@@ -535,9 +532,6 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
             }
 
             toReturn->push_back(pieceMove(this, position, tempPosition));
-
-            if(tempPosition % 8 == 7)
-                break;
 
             tempPosition++;
         }
@@ -560,9 +554,6 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
             toReturn->push_back(pieceMove(this, position, tempPosition));
 
-            if(tempPosition / 8 != 7)
-                break;
-
             tempPosition += 8;
         }
 
@@ -583,9 +574,6 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
             }
 
             toReturn->push_back(pieceMove(this, position, tempPosition));
-
-            if(tempPosition / 8 != 7)
-                break;
 
             tempPosition -= 8;
         }
