@@ -57,7 +57,7 @@ public:
 
     std::string positionToString(int position);
 
-    bool prepareExecutePseudoLegal(pieceMove *move);
+    bool executeMove(pieceMove *move);
 
 
     ~chessBoard() {

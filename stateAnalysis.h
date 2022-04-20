@@ -19,8 +19,6 @@ public:
 
     chessBoard* board = new chessBoard();
 
-    bool executeMove(pieceMove* move);
-
     stateAnalysis() = default;
 
 };

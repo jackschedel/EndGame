@@ -18,9 +18,9 @@ int main() {
 
     //board.boardInit("8/8/4k3/8/8/1R6/8/4K3 w - - 0 1");
 
-    state->board->boardInit("8/7k/N7/8/8/8/8/4K3 w - - 0 1");
+    //state->board->boardInit("8/7k/N7/8/8/8/8/4K3 w - - 0 1");
 
-
+    state->board->boardInit("2r5/8/8/8/8/8/2R5/2K5 w - - 10 6");
 
 
 
@@ -50,7 +50,7 @@ int main() {
      */
 
 
-    //state->board->printBoard();
+    state->board->printBoard();
 
 
 
@@ -76,23 +76,16 @@ int main() {
 
     std::vector<pieceMove>* PLmoves;
 
-    for (int i = 0; i < 64; ++i) {
-        if(state->board->pieceArr[i] != nullptr) {
+    PLmoves = state->board->pieceArr[10]->generatePseudoLegalMoves(10, state->board);
 
-            PLmoves = state->board->pieceArr[i]->generatePseudoLegalMoves(i, state->board);
 
-            state->board->pieceArr[i]->pseudoLegalPrint(i, state->board, PLmoves);
-            std::cout << std::endl;
 
-            break;
-        }
-    }
 
     pieceMove* move = &((*PLmoves)[0]);
 
+    std::cout << std::endl << std::endl;
 
-
-    bool executeSuccess = state->executeMove(move);
+    bool executeSuccess = state->board->executeMove(move);
 
     if(!executeSuccess) {
         std::cout << "failed to execute move!" << std::endl;
@@ -105,8 +98,6 @@ int main() {
 
         std::cout << std::endl;
 
-
-        std::cout << state->board->pieceArr[0];
 
 
         if(state->board->isInCheck(piece::white))
