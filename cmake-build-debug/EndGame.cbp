@@ -97,6 +97,12 @@
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h">
 			<Option target="EndGame"/>
 		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.cpp">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.h">
+			<Option target="EndGame"/>
+		</Unit>
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

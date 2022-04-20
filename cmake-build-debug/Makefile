@@ -200,6 +200,30 @@ piece.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/piece.cpp.s
 .PHONY : piece.cpp.s
 
+stateAnalysis.obj: stateAnalysis.cpp.obj
+.PHONY : stateAnalysis.obj
+
+# target to build an object file
+stateAnalysis.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj
+.PHONY : stateAnalysis.cpp.obj
+
+stateAnalysis.i: stateAnalysis.cpp.i
+.PHONY : stateAnalysis.i
+
+# target to preprocess a source file
+stateAnalysis.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/stateAnalysis.cpp.i
+.PHONY : stateAnalysis.cpp.i
+
+stateAnalysis.s: stateAnalysis.cpp.s
+.PHONY : stateAnalysis.s
+
+# target to generate assembly for a file
+stateAnalysis.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/stateAnalysis.cpp.s
+.PHONY : stateAnalysis.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,6 +242,9 @@ help:
 	@echo ... piece.obj
 	@echo ... piece.i
 	@echo ... piece.s
+	@echo ... stateAnalysis.obj
+	@echo ... stateAnalysis.i
+	@echo ... stateAnalysis.s
 .PHONY : help
 
 

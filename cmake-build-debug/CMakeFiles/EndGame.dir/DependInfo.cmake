@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.cpp" "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/CMakeFiles/EndGame.dir/chessBoard.cpp.obj"
   "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/main.cpp" "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/CMakeFiles/EndGame.dir/main.cpp.obj"
   "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.cpp" "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/CMakeFiles/EndGame.dir/piece.cpp.obj"
+  "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.cpp" "D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug/CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

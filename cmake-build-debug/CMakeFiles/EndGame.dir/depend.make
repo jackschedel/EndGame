@@ -5,11 +5,13 @@ CMakeFiles/EndGame.dir/chessBoard.cpp.obj: \
  ../chessBoard.cpp \
  ../chessBoard.h \
  ../piece.h \
- ../pieceMove.h
+ ../pieceMove.h \
+ ../prettyprint.hpp
 CMakeFiles/EndGame.dir/main.cpp.obj: \
  ../chessBoard.h \
  ../main.cpp \
  ../piece.h \
+ ../pieceMove.h \
  ../stateAnalysis.h
 CMakeFiles/EndGame.dir/piece.cpp.obj: \
  ../chessBoard.h \
@@ -17,3 +19,9 @@ CMakeFiles/EndGame.dir/piece.cpp.obj: \
  ../piece.h \
  ../pieceMove.cpp \
  ../pieceMove.h
+CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj: \
+ ../chessBoard.h \
+ ../piece.h \
+ ../pieceMove.h \
+ ../stateAnalysis.cpp \
+ ../stateAnalysis.h

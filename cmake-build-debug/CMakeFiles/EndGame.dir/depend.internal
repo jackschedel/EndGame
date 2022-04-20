@@ -6,10 +6,12 @@ CMakeFiles/EndGame.dir/chessBoard.cpp.obj
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
+ D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/prettyprint.hpp
 CMakeFiles/EndGame.dir/main.cpp.obj
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/main.cpp
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
+ D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.h
 CMakeFiles/EndGame.dir/piece.cpp.obj
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
@@ -17,3 +19,9 @@ CMakeFiles/EndGame.dir/piece.cpp.obj
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.cpp
  D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
+CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj
+ D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h
+ D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h
+ D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/pieceMove.h
+ D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.cpp
+ D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.h

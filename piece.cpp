@@ -3,6 +3,7 @@
 #include "pieceMove.cpp"
 
 
+
 piece::piece(enum type type, enum color color){
     this->type = type;
     this->color = color;
@@ -725,9 +726,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
     return toReturn;
 }
 
-void piece::pseudoLegalPrint(int position, chessBoard *board) {
-
-    auto moveVector = generatePseudoLegalMoves(position, board);
+void piece::pseudoLegalPrint(int position, chessBoard *board, std::vector<pieceMove>* moveVector) {
 
     std::cout << colorToString() << " " << typeToString() << ": " << board->positionToString(position) <<std::endl;
 

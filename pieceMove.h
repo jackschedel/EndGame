@@ -1,5 +1,7 @@
 class piece;
 
+
+
 #ifndef ENDGAME_PIECEMOVE_H
 #define ENDGAME_PIECEMOVE_H
 

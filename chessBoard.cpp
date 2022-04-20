@@ -1,6 +1,7 @@
 #include "chessBoard.h"
 #include "pieceMove.h"
 #include "piece.h"
+#include "prettyprint.hpp"
 
 
 void chessBoard::boardInit(std::string fenString) {
@@ -78,6 +79,8 @@ void chessBoard::boardInit(std::string fenString) {
 
                 }
 
+
+
                 newPiece = new piece(currType, currColor);
 
                 pieceArr[currSquare] = newPiece;
@@ -149,7 +152,10 @@ void chessBoard::printBoard() {
                 std::cout << std::endl;
             }
 
+
             if (pieceArr[(8 * i) + j] != nullptr) {
+
+
 
                 std::cout << pieceArr[(8 * i) + j]->pieceChar();
 

@@ -2,6 +2,7 @@
 #include <cctype>
 #include <locale>
 #include <vector>
+
 class pieceMove;
 class chessBoard;
 
@@ -27,7 +28,7 @@ public:
 
     std::vector<pieceMove>* generatePseudoLegalMoves(int position, chessBoard* board);
 
-    void pseudoLegalPrint(int position, chessBoard* board);
+    void pseudoLegalPrint(int position, chessBoard* board, std::vector<pieceMove>* moveVector);
 
     std::string typeToString();
 

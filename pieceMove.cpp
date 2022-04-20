@@ -1,7 +1,9 @@
 #include "pieceMove.h"
+
 #include "piece.h"
 #include <iostream>
 #include "chessBoard.h"
+
 
 void pieceMove::printMove(chessBoard* board) {
     std::cout << board->positionToString(to) << " ";

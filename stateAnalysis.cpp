@@ -1,5 +1,5 @@
 #include "stateAnalysis.h"
-#include "chessBoard.h"
+
 #include "pieceMove.h"
 #include "piece.h"
 
@@ -16,12 +16,15 @@ bool stateAnalysis::executeMove(pieceMove* move) {
 
     chessBoard* tempBoard = board->tempCopy;
 
-    delete board;
+
+    chessBoard* tempBoard2 = board;
+
 
     board = tempBoard;
 
+
+    //delete tempBoard2;
+
     return true;
-
-
 
 }

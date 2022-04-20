@@ -1,10 +1,15 @@
-#ifndef ENDGAME_CHESSBOARD_H
-#define ENDGAME_CHESSBOARD_H
-
-#include "piece.h"
 #include <cctype>
 #include <iostream>
 #include <vector>
+#include <string>
+
+#include "piece.h"
+
+
+#ifndef ENDGAME_CHESSBOARD_H
+#define ENDGAME_CHESSBOARD_H
+
+
 class pieceMove;
 class piece;
 
@@ -13,9 +18,8 @@ class chessBoard {
 private:
 
 
-
 public:
-    chessBoard* tempCopy = nullptr;
+    chessBoard *tempCopy = nullptr;
 
     bool whiteInCheck = false;
 
@@ -28,6 +32,9 @@ public:
     int blackKingPos = -1;
 
     bool canCastle[4] = {false};
+
+    piece* pieceArr[64]{nullptr};
+
 
     /*
      * 0: white queenside
@@ -42,8 +49,6 @@ public:
 
     bool isInCheck(enum piece::color colorToCheck, int position = -1);
 
-    piece* pieceArr[64] {nullptr};
-
     void boardInit(std::string fenString = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
 
     void printBoard();
@@ -52,8 +57,15 @@ public:
 
     std::string positionToString(int position);
 
-    bool prepareExecutePseudoLegal(pieceMove* move);
-};
+    bool prepareExecutePseudoLegal(pieceMove *move);
 
+
+    ~chessBoard() {
+
+
+    };
+
+
+};
 
 #endif //ENDGAME_CHESSBOARD_H

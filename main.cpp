@@ -1,11 +1,14 @@
 #include <iostream>
-#include "chessBoard.h"
+
 #include "stateAnalysis.h"
+#include "chessBoard.h"
+#include "pieceMove.h"
+#include "piece.h"
 
 
 int main() {
 
-    stateAnalysis stateAnalysis;
+    stateAnalysis* state = new stateAnalysis();
 
     //board.boardInit();
     //board.boardInit("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
@@ -15,7 +18,7 @@ int main() {
 
     //board.boardInit("8/8/4k3/8/8/1R6/8/4K3 w - - 0 1");
 
-    stateAnalysis.board->boardInit("8/7k/N7/8/8/8/8/4K3 w - - 0 1");
+    state->board->boardInit("8/7k/N7/8/8/8/8/4K3 w - - 0 1");
 
 
 
@@ -47,28 +50,85 @@ int main() {
      */
 
 
-    stateAnalysis.board->printBoard();
+    //state->board->printBoard();
 
 
 
     std::cout << std::endl;
 
 
-    if(stateAnalysis.board->isInCheck(piece::white))
+    if(state->board->isInCheck(piece::white))
         std::cout << "white in check!"<< std::endl<< std::endl;
 
-    if(stateAnalysis.board->isInCheck(piece::black))
+    if(state->board->isInCheck(piece::black))
         std::cout << "black in check!"<< std::endl<< std::endl;
 
 
-
     for (int i = 0; i < 64; ++i) {
-        if(stateAnalysis.board->pieceArr[i] != nullptr) {
-            stateAnalysis.board->pieceArr[i]->pseudoLegalPrint(i, stateAnalysis.board);
+        if(state->board->pieceArr[i] != nullptr) {
+
+            std::vector<pieceMove>* PLmoves = state->board->pieceArr[i]->generatePseudoLegalMoves(i, state->board);
+
+            state->board->pieceArr[i]->pseudoLegalPrint(i, state->board, PLmoves);
             std::cout << std::endl;
         }
     }
 
+    std::vector<pieceMove>* PLmoves;
+
+    for (int i = 0; i < 64; ++i) {
+        if(state->board->pieceArr[i] != nullptr) {
+
+            PLmoves = state->board->pieceArr[i]->generatePseudoLegalMoves(i, state->board);
+
+            state->board->pieceArr[i]->pseudoLegalPrint(i, state->board, PLmoves);
+            std::cout << std::endl;
+
+            break;
+        }
+    }
+
+    pieceMove* move = &((*PLmoves)[0]);
+
+
+
+    bool executeSuccess = state->executeMove(move);
+
+    if(!executeSuccess) {
+        std::cout << "failed to execute move!" << std::endl;
+    } else {
+
+
+        state->board->printBoard();
+
+
+
+        std::cout << std::endl;
+
+
+        std::cout << state->board->pieceArr[0];
+
+
+        if(state->board->isInCheck(piece::white))
+            std::cout << "white in check!"<< std::endl<< std::endl;
+
+        if(state->board->isInCheck(piece::black))
+            std::cout << "black in check!"<< std::endl<< std::endl;
+
+
+        for (int i = 0; i < 64; ++i) {
+            if(state->board->pieceArr[i] != nullptr) {
+
+                std::vector<pieceMove>* PLmoves = state->board->pieceArr[i]->generatePseudoLegalMoves(i, state->board);
+
+                state->board->pieceArr[i]->pseudoLegalPrint(i, state->board, PLmoves);
+                std::cout << std::endl;
+            }
+        }
+
+
+
+    }
 
 
 
