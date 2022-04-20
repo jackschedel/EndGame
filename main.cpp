@@ -50,7 +50,7 @@ int main() {
      */
 
 
-    //state->board->printBoard();
+    state->board->printBoard();
 
 
 
