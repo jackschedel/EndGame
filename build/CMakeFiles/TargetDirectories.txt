@@ -1,0 +1,3 @@
+C:/Users/merye/OneDrive/Documents/GitHub/EndGame/EndGame/build/CMakeFiles/EndGame.dir
+C:/Users/merye/OneDrive/Documents/GitHub/EndGame/EndGame/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/merye/OneDrive/Documents/GitHub/EndGame/EndGame/build/CMakeFiles/ZERO_CHECK.dir
