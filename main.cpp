@@ -1,11 +1,27 @@
 #include <iostream>
+#include <fstream>
 #include "chessBoard.h"
-#include <SFML/Graphics.hpp>
 
 int main() {
 
     chessBoard board;
-
+    ifstream reader("mate_in_lichess_db_puzzles.csv");
+    map <int, chessBoard> theboards;
+    while (getline(reader, line)) {
+        stringstream theline(line);
+        getline(theline, puzzleid, ',');
+        getline(theline, FEN, ',');
+        getline(theline, Moves, ',');
+        getline(theline, Rating, ',');
+        getline(theline, RatingDeviation, ',');
+        getline(theline, Popularity, ',');
+        getline(theline, NBplays, ',');
+        getline(theline, theme, ',');
+        getline(theline, url, ',');
+        chessBoard newone = chessBoard(FEN);
+        int rate = stoi(Rating);
+        theboards.insert(rate, newone);
+    }
     //board.boardInit();
     //board.boardInit("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
     //board.boardInit("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2");
