@@ -4,7 +4,7 @@
 # compile CXX with C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/g++.exe
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = @CMakeFiles/EndGame.dir/includes_CXX.rsp
 
 CXX_FLAGS = -g -std=gnu++14
 

@@ -16,6 +16,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "D:/Libraries/SFML-2.5.1/include"
   )
 
 # The set of dependency files which are needed:

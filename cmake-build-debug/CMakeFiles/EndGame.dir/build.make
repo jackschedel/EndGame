@@ -66,6 +66,7 @@ include CMakeFiles/EndGame.dir/progress.make
 include CMakeFiles/EndGame.dir/flags.make
 
 CMakeFiles/EndGame.dir/main.cpp.obj: CMakeFiles/EndGame.dir/flags.make
+CMakeFiles/EndGame.dir/main.cpp.obj: CMakeFiles/EndGame.dir/includes_CXX.rsp
 CMakeFiles/EndGame.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EndGame.dir/main.cpp.obj"
 	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EndGame.dir\main.cpp.obj -c "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\main.cpp"
@@ -79,6 +80,7 @@ CMakeFiles/EndGame.dir/main.cpp.s: cmake_force
 	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\main.cpp" -o CMakeFiles\EndGame.dir\main.cpp.s
 
 CMakeFiles/EndGame.dir/chessBoard.cpp.obj: CMakeFiles/EndGame.dir/flags.make
+CMakeFiles/EndGame.dir/chessBoard.cpp.obj: CMakeFiles/EndGame.dir/includes_CXX.rsp
 CMakeFiles/EndGame.dir/chessBoard.cpp.obj: ../chessBoard.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EndGame.dir/chessBoard.cpp.obj"
 	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EndGame.dir\chessBoard.cpp.obj -c "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\chessBoard.cpp"
@@ -92,6 +94,7 @@ CMakeFiles/EndGame.dir/chessBoard.cpp.s: cmake_force
 	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\chessBoard.cpp" -o CMakeFiles\EndGame.dir\chessBoard.cpp.s
 
 CMakeFiles/EndGame.dir/piece.cpp.obj: CMakeFiles/EndGame.dir/flags.make
+CMakeFiles/EndGame.dir/piece.cpp.obj: CMakeFiles/EndGame.dir/includes_CXX.rsp
 CMakeFiles/EndGame.dir/piece.cpp.obj: ../piece.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EndGame.dir/piece.cpp.obj"
 	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EndGame.dir\piece.cpp.obj -c "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\piece.cpp"
@@ -117,6 +120,10 @@ EndGame.exe: CMakeFiles/EndGame.dir/main.cpp.obj
 EndGame.exe: CMakeFiles/EndGame.dir/chessBoard.cpp.obj
 EndGame.exe: CMakeFiles/EndGame.dir/piece.cpp.obj
 EndGame.exe: CMakeFiles/EndGame.dir/build.make
+EndGame.exe: D:/Libraries/SFML-2.5.1/lib/sfml-graphics-d.lib
+EndGame.exe: D:/Libraries/SFML-2.5.1/lib/sfml-audio-d.lib
+EndGame.exe: D:/Libraries/SFML-2.5.1/lib/sfml-window-d.lib
+EndGame.exe: D:/Libraries/SFML-2.5.1/lib/sfml-system-d.lib
 EndGame.exe: CMakeFiles/EndGame.dir/linklibs.rsp
 EndGame.exe: CMakeFiles/EndGame.dir/objects1.rsp
 EndGame.exe: CMakeFiles/EndGame.dir/link.txt

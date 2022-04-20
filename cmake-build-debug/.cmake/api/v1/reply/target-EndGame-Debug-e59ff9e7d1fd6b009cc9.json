@@ -13,7 +13,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -27,7 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 11,
 				"parent" : 0
 			}
 		]
@@ -42,6 +49,14 @@
 				},
 				{
 					"fragment" : "-std=gnu++14"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Libraries/SFML-2.5.1/include"
 				}
 			],
 			"language" : "CXX",
@@ -73,6 +88,24 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\Libraries\\SFML-2.5.1\\lib\\sfml-graphics-d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\Libraries\\SFML-2.5.1\\lib\\sfml-audio-d.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\Libraries\\SFML-2.5.1\\lib\\sfml-window-d.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\Libraries\\SFML-2.5.1\\lib\\sfml-system-d.lib",
+				"role" : "libraries"
 			},
 			{
 				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",

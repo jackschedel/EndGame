@@ -5,7 +5,7 @@
 		<Option title="EndGame"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\Libraries\;CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\;CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\;CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\cmake\;CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\cmake\SFML\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/cmake-build-debug"/>
@@ -34,6 +34,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/Libraries/SFML-2.5.1/include"/>
 					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0"/>
 					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/x86_64-w64-mingw32"/>
 					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/backward"/>
@@ -56,6 +57,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/Libraries/SFML-2.5.1/include"/>
 					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0"/>
 					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/x86_64-w64-mingw32"/>
 					<Add directory="c:\programdata\chocolatey\lib\mingw\tools\install\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include/c++/11.2.0/backward"/>
@@ -99,6 +101,24 @@
 		</Unit>
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/../../../../../../../Libraries/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/../../../../../../../Libraries/SFML-2.5.1/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/../../../../../../../Libraries/SFML-2.5.1/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/../../../../../../../Libraries/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/../../../../../../../Libraries/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/../../../../../../../Libraries/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\Libraries\SFML-2.5.1\lib\cmake\SFML\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -253,6 +253,9 @@ EndGame_BINARY_DIR:STATIC=D:/Documents/School/UF Freshman/Semester 2/Data Struct
 //Value Computed by CMake
 EndGame_SOURCE_DIR:STATIC=D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame
 
+//Path to a file.
+SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

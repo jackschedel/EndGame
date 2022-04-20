@@ -1,1 +1,1 @@
- -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ D:/Libraries/SFML-2.5.1/lib/sfml-graphics-d.lib D:/Libraries/SFML-2.5.1/lib/sfml-audio-d.lib D:/Libraries/SFML-2.5.1/lib/sfml-window-d.lib D:/Libraries/SFML-2.5.1/lib/sfml-system-d.lib -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

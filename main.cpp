@@ -1,5 +1,6 @@
 #include <iostream>
 #include "chessBoard.h"
+#include <SFML/Graphics.hpp>
 
 int main() {
 
