@@ -1,4 +1,7 @@
 #include "chessBoard.h"
+#include "pieceMove.h"
+#include "piece.h"
+
 
 void chessBoard::boardInit(std::string fenString) {
 
@@ -572,4 +575,153 @@ bool chessBoard::isInCheck(enum piece::color colorToCheck, int position) {
 
     return false;
 }
+
+bool chessBoard::prepareExecutePseudoLegal(pieceMove* move) {
+
+    enum piece::color tempColor = move->piece->color;
+
+    chessBoard tempBoardCopy = *this;
+
+    chessBoard* tempBoard = &tempBoardCopy;
+
+    if(move->specialMove == pieceMove::none || move->specialMove == pieceMove::enPassant || move->specialMove == pieceMove::doublePawn) {
+
+        if(move->capturing != -1) {
+            piece* toDelete = tempBoard->pieceArr[move->capturing];
+
+            if(toDelete->type == piece::rook && toDelete->color == piece::black) {
+                if (move->capturing == 56)
+                    tempBoard->canCastle[2] = false;
+
+                if (move->capturing == 63)
+                    tempBoard->canCastle[3] = false;
+            }
+
+            if(toDelete->type == piece::rook && toDelete->color == piece::white) {
+                if (move->capturing == 0)
+                    tempBoard->canCastle[0] = false;
+
+                if (move->capturing == 7)
+                    tempBoard->canCastle[1] = false;
+            }
+
+            tempBoard->pieceArr[move->capturing] = nullptr;
+
+            delete toDelete;
+
+        }
+
+        tempBoard->pieceArr[move->to] = move->piece;
+
+        tempBoard->pieceArr[move->from] = nullptr;
+
+    }
+
+    if(move->specialMove == pieceMove::queensideCastle) {
+
+        if(move->piece->color == piece::white) {
+
+            if(tempBoard->isInCheck(tempColor, 4) || tempBoard->isInCheck(tempColor, 3) || tempBoard->isInCheck(tempColor, 2))
+                return false;
+
+            tempBoard->pieceArr[3] = tempBoard->pieceArr[0];
+
+            tempBoard->pieceArr[0] = nullptr;
+
+            tempBoard->pieceArr[2] = tempBoard->pieceArr[4];
+
+            tempBoard->pieceArr[4] = nullptr;
+
+            whiteKingPos = 2;
+
+        }else {
+
+            if(tempBoard->isInCheck(tempColor, 60) || tempBoard->isInCheck(tempColor, 59) || tempBoard->isInCheck(tempColor, 58))
+                return false;
+
+            tempBoard->pieceArr[59] = tempBoard->pieceArr[56];
+
+            tempBoard->pieceArr[56] = nullptr;
+
+            tempBoard->pieceArr[58] = tempBoard->pieceArr[60];
+
+            tempBoard->pieceArr[60] = nullptr;
+
+            whiteKingPos = 58;
+
+        }
+
+    }
+
+    if(move->specialMove == pieceMove::kingsideCastle) {
+
+        if(move->piece->color == piece::white) {
+
+            if(tempBoard->isInCheck(tempColor, 4) || tempBoard->isInCheck(tempColor, 5) || tempBoard->isInCheck(tempColor, 6))
+                return false;
+
+            tempBoard->pieceArr[5] = tempBoard->pieceArr[7];
+
+            tempBoard->pieceArr[7] = nullptr;
+
+            tempBoard->pieceArr[6] = tempBoard->pieceArr[4];
+
+            tempBoard->pieceArr[4] = nullptr;
+
+            whiteKingPos = 6;
+
+        }else {
+
+            if(tempBoard->isInCheck(tempColor, 60) || tempBoard->isInCheck(tempColor, 61) || tempBoard->isInCheck(tempColor, 62))
+                return false;
+
+            tempBoard->pieceArr[61] = tempBoard->pieceArr[63];
+
+            tempBoard->pieceArr[63] = nullptr;
+
+            tempBoard->pieceArr[62] = tempBoard->pieceArr[60];
+
+            tempBoard->pieceArr[60] = nullptr;
+
+            blackKingPos = 62;
+
+        }
+
+    }
+
+
+    if(move->specialMove == pieceMove::upgrade) {
+
+        if(move->capturing != -1) {
+            piece* toDelete = tempBoard->pieceArr[move->capturing];
+
+            tempBoard->pieceArr[move->capturing] = nullptr;
+
+            delete toDelete;
+
+        }
+
+        piece* toDelete2 = tempBoard->pieceArr[move->from];
+
+        tempBoard->pieceArr[move->from] = nullptr;
+
+        delete toDelete2;
+
+
+        tempBoard->pieceArr[move->to] = new piece(move->upgradeType, tempColor);
+
+    }
+
+
+    if(tempBoard->isInCheck(tempColor)){
+        return false;
+    } else {
+
+        tempCopy = tempBoard;
+
+    }
+
+    return true;
+}
+
 

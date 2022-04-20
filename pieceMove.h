@@ -6,21 +6,19 @@ class piece;
 class pieceMove {
 private:
     std::string nameDefSpecialMove[6] = {"doublePawn", "enPassant", "queensideCastle", "kingsideCastle", "upgrade", "none"};
-    std::string nameDefUpgradeType[5] = {"na", "knight", "bishop", "rook", "queen"};
 public:
     enum specialMove{doublePawn, enPassant, queensideCastle, kingsideCastle, upgrade, none};
 
-    enum upgradeType{na, knight, bishop, rook, queen};
 
     piece* piece;
     int from;
     int to;
     int capturing;
 
-    upgradeType upgradeType = na;
-    specialMove specialMove;
+    enum piece::type upgradeType = piece::pawn;
+    specialMove specialMove = none;
 
-    pieceMove(class piece* piece, int from, int to,enum specialMove specialMove = none, int capturing = -1, enum upgradeType upgradeType = na) {
+    pieceMove(class piece* piece, int from, int to,enum specialMove specialMove = none, int capturing = -1, enum piece::type upgradeType = piece::pawn) {
 
         this->piece = piece;
         this->from = from;
@@ -37,7 +35,6 @@ public:
 
     std::string specialMoveToString();
 
-    std::string upgradeTypeToString();
 };
 
 

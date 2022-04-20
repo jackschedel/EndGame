@@ -1,9 +1,11 @@
 #include <iostream>
 #include "chessBoard.h"
+#include "stateAnalysis.h"
+
 
 int main() {
 
-    chessBoard board;
+    stateAnalysis stateAnalysis;
 
     //board.boardInit();
     //board.boardInit("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
@@ -13,7 +15,7 @@ int main() {
 
     //board.boardInit("8/8/4k3/8/8/1R6/8/4K3 w - - 0 1");
 
-    board.boardInit("8/7k/N7/8/8/8/8/4K3 w - - 0 1");
+    stateAnalysis.board->boardInit("8/7k/N7/8/8/8/8/4K3 w - - 0 1");
 
 
 
@@ -45,28 +47,28 @@ int main() {
      */
 
 
-    board.printBoard();
+    stateAnalysis.board->printBoard();
 
 
 
     std::cout << std::endl;
 
 
-    if(board.isInCheck(piece::white))
+    if(stateAnalysis.board->isInCheck(piece::white))
         std::cout << "white in check!"<< std::endl<< std::endl;
 
-    if(board.isInCheck(piece::black))
+    if(stateAnalysis.board->isInCheck(piece::black))
         std::cout << "black in check!"<< std::endl<< std::endl;
 
 
-    /*
+
     for (int i = 0; i < 64; ++i) {
-        if(board.pieceArr[i] != nullptr) {
-            board.pieceArr[i]->pseudoLegalPrint(i, &board);
+        if(stateAnalysis.board->pieceArr[i] != nullptr) {
+            stateAnalysis.board->pieceArr[i]->pseudoLegalPrint(i, stateAnalysis.board);
             std::cout << std::endl;
         }
     }
-     */
+
 
 
 

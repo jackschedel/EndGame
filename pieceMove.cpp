@@ -21,8 +21,3 @@ void pieceMove::printMove(chessBoard* board) {
 std::string pieceMove::specialMoveToString() {
     return nameDefSpecialMove[specialMove];
 }
-
-std::string pieceMove::upgradeTypeToString() {
-    return nameDefUpgradeType[upgradeType];
-}
-

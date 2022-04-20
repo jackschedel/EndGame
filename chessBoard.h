@@ -5,6 +5,9 @@
 #include <cctype>
 #include <iostream>
 #include <vector>
+class pieceMove;
+class piece;
+
 
 class chessBoard {
 private:
@@ -12,6 +15,8 @@ private:
 
 
 public:
+    chessBoard* tempCopy = nullptr;
+
     bool whiteInCheck = false;
 
     bool blackInCheck = false;
@@ -43,7 +48,11 @@ public:
 
     void printBoard();
 
+    chessBoard() = default;
+
     std::string positionToString(int position);
+
+    bool prepareExecutePseudoLegal(pieceMove* move);
 };
 
 

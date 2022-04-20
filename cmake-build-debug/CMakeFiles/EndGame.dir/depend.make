@@ -4,11 +4,13 @@
 CMakeFiles/EndGame.dir/chessBoard.cpp.obj: \
  ../chessBoard.cpp \
  ../chessBoard.h \
- ../piece.h
+ ../piece.h \
+ ../pieceMove.h
 CMakeFiles/EndGame.dir/main.cpp.obj: \
  ../chessBoard.h \
  ../main.cpp \
- ../piece.h
+ ../piece.h \
+ ../stateAnalysis.h
 CMakeFiles/EndGame.dir/piece.cpp.obj: \
  ../chessBoard.h \
  ../piece.cpp \
