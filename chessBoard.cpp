@@ -621,7 +621,7 @@ bool chessBoard::executeMove(pieceMove* move) {
 
             pieceArr[move->capturing] = nullptr;
 
-            delete toDelete;
+            // delete toDelete;
 
         }
 

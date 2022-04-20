@@ -15,7 +15,7 @@ int main() {
 
     initBoard.boardInit("3r2k1/4nppp/pq1p1b2/1p2P3/2r2P2/2P1NR2/PP1Q2BP/3R2K1 b - - 0 24");
 
-    decisionTreeNode* decisionTree = new decisionTreeNode(&initBoard);
+    decisionTreeNode* decisionTree = new decisionTreeNode(initBoard);
 
     decisionTree->board.printBoard();
 
@@ -33,6 +33,14 @@ int main() {
 
     if(decisionTree->board.isInCheck(piece::black))
         std::cout << "black in check!"<< std::endl<< std::endl;
+
+    auto result = decisionTree->iterateOnce();
+
+    std::cout << "psmove size: " << PSMoveArr->size() << std::endl;
+
+    std::cout << "children size: " << decisionTree->children.size() << std::endl;
+
+
 
     /*
     std::vector<pieceMove>* PLmoves;

@@ -11,6 +11,8 @@ class pieceMove;
 class decisionTreeNode {
 
 public:
+    enum result{continuing, checkmate, stalemate};
+
 
     std::vector<decisionTreeNode*> children;
 
@@ -18,12 +20,16 @@ public:
 
     chessBoard board;
 
-    decisionTreeNode(chessBoard* givenBoard,  decisionTreeNode* givenParent = nullptr){
-      board = *givenBoard;
+    decisionTreeNode(chessBoard givenBoard,  decisionTreeNode* givenParent = nullptr){
+      board = givenBoard;
       parent = givenParent;
     };
 
-    void iterateOnce();
+    decisionTreeNode* iterateOnce();
+
+    decisionTreeNode* iterateAll();
+
+    decisionTreeNode* iterateAllAll();
 
 
 

@@ -1,4 +1,5 @@
 #include <vector>
+#include <queue>
 
 #include "chessBoard.h"
 
