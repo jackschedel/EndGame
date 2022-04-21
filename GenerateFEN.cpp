@@ -1,3 +1,5 @@
+#include <random>
+#include <ctime>
 #include "GenerateFEN.h"
 using namespace std;
 
@@ -22,7 +24,13 @@ GenerateFEN::GenerateFEN()
 ///output FEN, 1st move
 pair<std::string, std::string> GenerateFEN::randomFEN()
 {
-	int index = rand() % mateIn_X.size();
+	mt19937 random(time(0));
+	uniform_int_distribution<int> distribution(0, mateIn_X.size() - 1);
+	int index = distribution(random);
+	/*cout << index << endl;
+	cout << mateIn_X.size() << endl;
+	cout << rand() << endl;
+	cout << rand() << endl;*/
 	string FEN, move;
 	unsigned int pos = 0;
 
