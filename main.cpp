@@ -11,20 +11,21 @@
 
 int main() {
 
-    GenerateFEN fenGen("mate_in_lichess_db_puzzles.csv");
+    GenerateFEN fenGen("testCases.csv");
 
     std::pair<std::string, std::string> randomPuzzle = fenGen.randomFEN();
 
-    std::cout << randomPuzzle.first << " " << randomPuzzle.second;
+    std::cout << std::endl << "given FEN String: " << randomPuzzle.first << std::endl;
 
+    std::cout << "given opponent first move: " << randomPuzzle.second << std::endl << std::endl;
 
     stateAnalysis* state = new stateAnalysis();
 
     chessBoard board;
+
     board.boardInit(randomPuzzle.first);
 
     auto startingPosPair = board.givenStringParse(randomPuzzle.second);
-
 
     auto pseudoLegalMoves = board.genAllPseudoLegalMoves();
 
