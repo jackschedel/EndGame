@@ -1,3 +1,6 @@
+#include <string>
+#include <utility>
+#include "chessBoard.h"
 class piece;
 
 
@@ -32,6 +35,38 @@ public:
         }
 
     };
+
+    std::string positionToString(int position){
+
+        std::string tempReturn;
+
+        tempReturn += char((position % 8) + 65);
+
+        tempReturn += ((position / 8) + 49);
+
+        return tempReturn;
+
+    };
+
+    std::string moveToString(){
+
+
+        if(specialMove == kingsideCastle && piece->color == piece::white)
+            return "O-O";
+
+        if(specialMove == kingsideCastle && piece->color == piece::black)
+            return "o-o";
+
+        if(specialMove == queensideCastle && piece->color == piece::white)
+            return "O-O-O";
+
+        if(specialMove == queensideCastle && piece->color == piece::black)
+            return "o-o-o";
+
+        return positionToString(from) + " " + positionToString(to);
+    };
+
+
 
     void printMove(chessBoard* board);
 

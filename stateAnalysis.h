@@ -1,5 +1,8 @@
 #include <vector>
 #include <queue>
+#include <utility>
+#include <string>
+
 
 #include "chessBoard.h"
 
@@ -20,7 +23,10 @@ public:
 
     chessBoard* board = new chessBoard();
 
+
     stateAnalysis() = default;
+
+    void mainAnalysis(std::string fenCode, pieceMove startingMove);
 
 };
 

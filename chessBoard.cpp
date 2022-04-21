@@ -208,16 +208,7 @@ void chessBoard::printBoard() {
 
 }
 
-int chessBoard::stringToPosition(std::string givenString) {
 
-    char rank = std::tolower(givenString[0]);
-
-    char file = givenString[1];
-
-    rank -= 97;
-
-    return 8 * (file - 49) + rank;
-}
 
 std::string chessBoard::positionToString(int position){
 
@@ -820,32 +811,54 @@ void chessBoard::pseudoLegalPrint(std::vector<pieceMove>* PSMoveArr) {
     for (int i = 0; i < PSMoveArr->size(); ++i) {
 
 
-
-        std::cout << (*PSMoveArr)[i].piece->colorToString()  << " " << (*PSMoveArr)[i].piece->typeToString();
-        std:: cout << " " << positionToString((*PSMoveArr)[i].from) << " to ";
-        std:: cout << positionToString((*PSMoveArr)[i].to);
+        std::cout << (*PSMoveArr)[i].piece->colorToString() << " " << (*PSMoveArr)[i].piece->typeToString();
+        std::cout << " " << positionToString((*PSMoveArr)[i].from) << " to ";
+        std::cout << positionToString((*PSMoveArr)[i].to);
 
         std::string specialMove = (*PSMoveArr)[i].specialMoveToString();
 
-        if((*PSMoveArr)[i].capturing != -1) {
-            std:: cout << " capturing ";
+        if ((*PSMoveArr)[i].capturing != -1) {
+            std::cout << " capturing ";
         }
 
-        if(specialMove != "none")
-            std:: cout << " (" << specialMove << ") ";
-
-
+        if (specialMove != "none")
+            std::cout << " (" << specialMove << ") ";
 
 
         std::cout << std::endl;
 
 
-
     }
-
-
 
 }
 
 
+bool chessBoard::isCheckmate() {
 
+    auto PLmoves = this->genAllPseudoLegalMoves();
+
+    for (int i = 0; i < PLmoves->size(); ++i) {
+
+        chessBoard temp = *this;
+
+
+        if(temp.executeMove(&(*PLmoves)[i])) {
+            return false;
+        }
+
+    }
+
+    enum piece::color currMove = piece::black;
+
+    if(whiteToMove){
+        currMove = piece::white;
+    }
+
+    if(this->isInCheck(currMove)) {
+        return true;
+
+    }
+
+    return false;
+
+}

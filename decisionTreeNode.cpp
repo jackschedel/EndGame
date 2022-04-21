@@ -3,7 +3,9 @@
 #include "piece.h"
 #include "pieceMove.h"
 
-decisionTreeNode* decisionTreeNode::iterateOnce() {
+void decisionTreeNode::iterateOnce(bool playAsWhite) {
+
+    int count = 0;
 
     auto PLmoves = board.genAllPseudoLegalMoves();
 
@@ -14,45 +16,46 @@ decisionTreeNode* decisionTreeNode::iterateOnce() {
 
         if(temp.executeMove(&(*PLmoves)[i])) {
             auto tempNode = new decisionTreeNode(temp, this);
+
+            tempNode->move = &(*PLmoves)[i];
             children.push_back(tempNode);
+            count++;
         }
 
     }
 
-    enum piece::color currMove = piece::black;
-
-    if(board.whiteToMove){
-        currMove = piece::white;
-    }
-
-    if(PLmoves->empty() && board.isInCheck(currMove)) {
-        return parent;
-
-    }
-
-    return nullptr;
-
 }
 
-decisionTreeNode* decisionTreeNode::iterateAll() {
+void decisionTreeNode::iterateAll(int depth, bool playAsWhite, std::vector<decisionTreeNode*>* checkMates) {
 
-    for (int i = 0; i < children.size(); ++i) {
-        auto mateParent = iterateOnce();
+    if(layerDeep > depth){
+        return;
+    }
 
-        if(mateParent != nullptr) {
-            return mateParent;
+    bool shouldContinue = true;
+
+    if(playAsWhite && board.whiteToMove){
+        if(board.isCheckmate()) {
+            this->isMate = true;
+            checkMates->push_back(this);
+            return;
         }
+    } else if (!playAsWhite && !board.whiteToMove){
+        if(board.isCheckmate()) {
+            this->isMate = true;
+            checkMates->push_back(this);
+            return;
+        }
+
     }
 
-    return nullptr;
-}
-
-decisionTreeNode* decisionTreeNode::iterateAllAll() {
+    this->iterateOnce(playAsWhite);
 
     for (int i = 0; i < children.size(); ++i) {
-        iterateAll();
+        children[i]->iterateAll(depth, playAsWhite, checkMates);
     }
 
-    return nullptr;
 }
+
+
 

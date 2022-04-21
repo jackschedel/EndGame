@@ -45,7 +45,6 @@ public:
 
     int enPassantTarget = -1;
 
-    int stringToPosition(std::string givenString);
 
     bool isInCheck(enum piece::color colorToCheck, int position = -1);
 
@@ -63,6 +62,28 @@ public:
 
     void pseudoLegalPrint(std::vector<pieceMove>* PSMoveArr);
 
+    bool isCheckmate();
+
+    int stringToPosition(std::string givenString) {
+
+        char rank = std::tolower(givenString[0]);
+
+        char file = givenString[1];
+
+        rank -= 97;
+
+        return 8 * (file - 49) + rank;
+    };
+
+
+    std::pair<int, int> givenStringParse(std::string givenString){
+
+        int toPos = stringToPosition(givenString.substr(0,2));
+
+        int fromPos = stringToPosition(givenString.substr(2,3));
+
+        return std::make_pair(toPos, fromPos);
+    };
 
     };
 

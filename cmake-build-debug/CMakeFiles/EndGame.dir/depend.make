@@ -28,6 +28,7 @@ CMakeFiles/EndGame.dir/piece.cpp.obj: \
  ../pieceMove.h
 CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj: \
  ../chessBoard.h \
+ ../decisionTreeNode.h \
  ../piece.h \
  ../pieceMove.h \
  ../stateAnalysis.cpp \

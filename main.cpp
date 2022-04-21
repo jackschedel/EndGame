@@ -1,4 +1,5 @@
 #include <iostream>
+#include <utility>
 
 #include "stateAnalysis.h"
 #include "chessBoard.h"
@@ -9,8 +10,42 @@
 
 int main() {
 
+
+    std::string FEN = "r1bqk2r/pp1nbNp1/2p1p2p/8/2BP4/1PN3P1/P3QP1P/3R1RK1 b kq - 0 19";
+
+    std::string opponentMove = "e8f7";
+
+
     stateAnalysis* state = new stateAnalysis();
 
+    chessBoard board;
+    board.boardInit(FEN);
+
+    auto startingPosPair = board.givenStringParse(opponentMove);
+
+
+    auto pseudoLegalMoves = board.genAllPseudoLegalMoves();
+
+    pieceMove* move = nullptr;
+
+    for (int i = 0; i < pseudoLegalMoves->size(); ++i) {
+
+
+        if((*pseudoLegalMoves)[i].from == startingPosPair.first) {
+            if ((*pseudoLegalMoves)[i].to == startingPosPair.second) {
+                move = &(*pseudoLegalMoves)[i];
+                break;
+            }
+        }
+    }
+
+
+    state->mainAnalysis(FEN, *move);
+
+
+
+
+    /*
     chessBoard initBoard;
 
     initBoard.boardInit("3r2k1/4nppp/pq1p1b2/1p2P3/2r2P2/2P1NR2/PP1Q2BP/3R2K1 b - - 0 24");
@@ -41,6 +76,12 @@ int main() {
     std::cout << "children size: " << decisionTree->children.size() << std::endl;
 
 
+    chessBoard test;
+
+    test.boardInit("3R2k1/4nppp/p4b2/1p2p3/2r2P2/2P1NR2/PP4BP/6K1 b - - 0 26");
+
+    std::cout << test.isCheckmate();
+*/
 
     /*
     std::vector<pieceMove>* PLmoves;
@@ -91,8 +132,6 @@ int main() {
 
 
 */
-
-
 
 }
 
