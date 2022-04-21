@@ -82,10 +82,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/GenerateFEN.cpp">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/GenerateFEN.h">
+			<Option target="EndGame"/>
+		</Unit>
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.cpp">
 			<Option target="EndGame"/>
 		</Unit>
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/chessBoard.h">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/decisionTreeNode.cpp">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/decisionTreeNode.h">
 			<Option target="EndGame"/>
 		</Unit>
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/main.cpp">
@@ -95,6 +107,12 @@
 			<Option target="EndGame"/>
 		</Unit>
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/piece.h">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.cpp">
+			<Option target="EndGame"/>
+		</Unit>
+		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/stateAnalysis.h">
 			<Option target="EndGame"/>
 		</Unit>
 		<Unit filename="D:/Documents/School/UF Freshman/Semester 2/Data Structures/Project 3/EndGame/CMakeLists.txt">

@@ -1,7 +1,9 @@
 #include "pieceMove.h"
+
 #include "piece.h"
 #include <iostream>
 #include "chessBoard.h"
+
 
 void pieceMove::printMove(chessBoard* board) {
     std::cout << board->positionToString(to) << " ";
@@ -21,8 +23,3 @@ void pieceMove::printMove(chessBoard* board) {
 std::string pieceMove::specialMoveToString() {
     return nameDefSpecialMove[specialMove];
 }
-
-std::string pieceMove::upgradeTypeToString() {
-    return nameDefUpgradeType[upgradeType];
-}
-

@@ -3,6 +3,7 @@
 #include "pieceMove.cpp"
 
 
+
 piece::piece(enum type type, enum color color){
     this->type = type;
     this->color = color;
@@ -46,13 +47,6 @@ char piece::pieceChar() {
          if( (position % 8) > 1 && (position / 8)  > 0) {
 
 
-
-
-
-
-
-
-
  */
 
 std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard* board) {
@@ -74,65 +68,72 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
             // if in rank 7 (upgrade)
             if(position > 47 && board->pieceArr[position + 8] == nullptr){
-                toReturn->push_back(pieceMove(this, position, position + 8, pieceMove::upgrade, -1, pieceMove::knight));
-                toReturn->push_back(pieceMove(this, position, position + 8, pieceMove::upgrade, -1, pieceMove::bishop));
-                toReturn->push_back(pieceMove(this, position, position + 8, pieceMove::upgrade, -1, pieceMove::rook));
-                toReturn->push_back(pieceMove(this, position, position + 8, pieceMove::upgrade, -1, pieceMove::queen));
+                toReturn->push_back(pieceMove(this, position, position + 8, pieceMove::upgrade, -1, piece::knight));
+                toReturn->push_back(pieceMove(this, position, position + 8, pieceMove::upgrade, -1, piece::bishop));
+                toReturn->push_back(pieceMove(this, position, position + 8, pieceMove::upgrade, -1, piece::rook));
+                toReturn->push_back(pieceMove(this, position, position + 8, pieceMove::upgrade, -1, piece::queen));
 
             }
 
             // capturing for all but last row
+            if(position % 8 != 0) {
+                if (board->pieceArr[position + 7] != nullptr)
+                    if (position < 48 && board->pieceArr[position + 7]->color == black)
+                        toReturn->push_back(pieceMove(this, position, position + 7, pieceMove::none, position + 7));
+            }
 
-            if(board->pieceArr[position + 7] != nullptr)
-                if(position < 48 && board->pieceArr[position + 7]->color == black)
-                    toReturn->push_back(pieceMove(this, position, position + 7, pieceMove::none, position + 7));
-
-            if(board->pieceArr[position + 9] != nullptr)
-                if(position < 48 && board->pieceArr[position + 9]->color == black)
-                    toReturn->push_back(pieceMove(this, position, position + 9, pieceMove::none, position + 9));
-
+            if(position % 8 != 7) {
+                if (board->pieceArr[position + 9] != nullptr)
+                    if (position < 48 && board->pieceArr[position + 9]->color == black)
+                        toReturn->push_back(pieceMove(this, position, position + 9, pieceMove::none, position + 9));
+            }
 
             // capturing + upgrading
-            if(board->pieceArr[position + 7] != nullptr) {
-                if (position > 47 && board->pieceArr[position + 7]->color == black) {
-                    toReturn->push_back(
-                            pieceMove(this, position, position + 7, pieceMove::upgrade, position + 7,
-                                      pieceMove::knight));
-                    toReturn->push_back(
-                            pieceMove(this, position, position + 7, pieceMove::upgrade, position + 7,
-                                      pieceMove::bishop));
-                    toReturn->push_back(
-                            pieceMove(this, position, position + 7, pieceMove::upgrade, position + 7, pieceMove::rook));
-                    toReturn->push_back(
-                            pieceMove(this, position, position + 7, pieceMove::upgrade, position + 7,
-                                      pieceMove::queen));
+            if(position % 8 != 0) {
+                if (board->pieceArr[position + 7] != nullptr) {
+                    if (position > 47 && board->pieceArr[position + 7]->color == black) {
+                        toReturn->push_back(
+                                pieceMove(this, position, position + 7, pieceMove::upgrade, position + 7,
+                                          piece::knight));
+                        toReturn->push_back(
+                                pieceMove(this, position, position + 7, pieceMove::upgrade, position + 7,
+                                          piece::bishop));
+                        toReturn->push_back(
+                                pieceMove(this, position, position + 7, pieceMove::upgrade, position + 7,
+                                          piece::rook));
+                        toReturn->push_back(
+                                pieceMove(this, position, position + 7, pieceMove::upgrade, position + 7,
+                                          piece::queen));
+                    }
                 }
             }
 
-            if(board->pieceArr[position + 9] != nullptr) {
-                if (position > 47 && board->pieceArr[position + 9]->color == black) {
-                    toReturn->push_back(
-                            pieceMove(this, position, position + 9, pieceMove::upgrade, position + 9,
-                                      pieceMove::knight));
-                    toReturn->push_back(
-                            pieceMove(this, position, position + 9, pieceMove::upgrade, position + 9,
-                                      pieceMove::bishop));
-                    toReturn->push_back(
-                            pieceMove(this, position, position + 9, pieceMove::upgrade, position + 9, pieceMove::rook));
-                    toReturn->push_back(
-                            pieceMove(this, position, position + 9, pieceMove::upgrade, position + 9,
-                                      pieceMove::queen));
+            if(position % 8 != 7) {
+                if (board->pieceArr[position + 9] != nullptr) {
+                    if (position > 47 && board->pieceArr[position + 9]->color == black) {
+                        toReturn->push_back(
+                                pieceMove(this, position, position + 9, pieceMove::upgrade, position + 9,
+                                          piece::knight));
+                        toReturn->push_back(
+                                pieceMove(this, position, position + 9, pieceMove::upgrade, position + 9,
+                                          piece::bishop));
+                        toReturn->push_back(
+                                pieceMove(this, position, position + 9, pieceMove::upgrade, position + 9,
+                                          piece::rook));
+                        toReturn->push_back(
+                                pieceMove(this, position, position + 9, pieceMove::upgrade, position + 9,
+                                          piece::queen));
+                    }
                 }
             }
-
 
             // en passant
             if(position > 31 && position < 40) {
 
-                if(position + 7 == board->enPassantTarget)
+                if(position % 8 != 0 && position + 7 == board->enPassantTarget)
                     toReturn->push_back(pieceMove(this, position, position + 7, pieceMove::enPassant, position - 1));
 
-                if(position + 9 == board->enPassantTarget)
+                if(position % 8 != 7 && position + 9 == board->enPassantTarget)
                     toReturn->push_back(pieceMove(this, position, position + 9, pieceMove::enPassant, position + 1));
 
             }
@@ -153,64 +154,72 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
             // if in rank 2 (upgrade)
             if(position < 16 && board->pieceArr[position - 8] == nullptr){
-                toReturn->push_back(pieceMove(this, position, position - 8, pieceMove::upgrade, -1, pieceMove::knight));
-                toReturn->push_back(pieceMove(this, position, position - 8, pieceMove::upgrade, -1, pieceMove::bishop));
-                toReturn->push_back(pieceMove(this, position, position - 8, pieceMove::upgrade, -1, pieceMove::rook));
-                toReturn->push_back(pieceMove(this, position, position - 8, pieceMove::upgrade, -1, pieceMove::queen));
+                toReturn->push_back(pieceMove(this, position, position - 8, pieceMove::upgrade, -1, piece::knight));
+                toReturn->push_back(pieceMove(this, position, position - 8, pieceMove::upgrade, -1, piece::bishop));
+                toReturn->push_back(pieceMove(this, position, position - 8, pieceMove::upgrade, -1, piece::rook));
+                toReturn->push_back(pieceMove(this, position, position - 8, pieceMove::upgrade, -1, piece::queen));
 
             }
 
             // capturing for all but last row
-            if(board->pieceArr[position - 7] != nullptr)
-                if(position > 15 && board->pieceArr[position - 7]->color == white)
-                    toReturn->push_back(pieceMove(this, position, position - 7, pieceMove::none, position - 7));
+            if(position % 8 != 7) {
+                if (board->pieceArr[position - 7] != nullptr)
+                    if (position > 15 && board->pieceArr[position - 7]->color == white)
+                        toReturn->push_back(pieceMove(this, position, position - 7, pieceMove::none, position - 7));
+            }
 
-            if(board->pieceArr[position - 9] != nullptr)
-                if(position > 15 && board->pieceArr[position - 9]->color == white)
-                    toReturn->push_back(pieceMove(this, position, position - 9, pieceMove::none, position - 9));
-
+            if(position % 8 != 0) {
+                if (board->pieceArr[position - 9] != nullptr)
+                    if (position > 15 && board->pieceArr[position - 9]->color == white)
+                        toReturn->push_back(pieceMove(this, position, position - 9, pieceMove::none, position - 9));
+            }
 
             // capturing + upgrading
-            if(board->pieceArr[position - 7] != nullptr) {
-                if (position < 16 && board->pieceArr[position - 7]->color == white) {
-                    toReturn->push_back(
-                            pieceMove(this, position, position - 7, pieceMove::upgrade, position - 7,
-                                      pieceMove::knight));
-                    toReturn->push_back(
-                            pieceMove(this, position, position - 7, pieceMove::upgrade, position - 7,
-                                      pieceMove::bishop));
-                    toReturn->push_back(
-                            pieceMove(this, position, position - 7, pieceMove::upgrade, position - 7, pieceMove::rook));
-                    toReturn->push_back(
-                            pieceMove(this, position, position - 7, pieceMove::upgrade, position - 7,
-                                      pieceMove::queen));
+            if(position % 8 != 7) {
+                if (board->pieceArr[position - 7] != nullptr) {
+                    if (position < 16 && board->pieceArr[position - 7]->color == white) {
+                        toReturn->push_back(
+                                pieceMove(this, position, position - 7, pieceMove::upgrade, position - 7,
+                                          piece::knight));
+                        toReturn->push_back(
+                                pieceMove(this, position, position - 7, pieceMove::upgrade, position - 7,
+                                          piece::bishop));
+                        toReturn->push_back(
+                                pieceMove(this, position, position - 7, pieceMove::upgrade, position - 7,
+                                          piece::rook));
+                        toReturn->push_back(
+                                pieceMove(this, position, position - 7, pieceMove::upgrade, position - 7,
+                                          piece::queen));
+                    }
                 }
             }
 
-            if(board->pieceArr[position - 9] != nullptr) {
-                if (position < 16 && board->pieceArr[position - 9]->color == white) {
-                    toReturn->push_back(
-                            pieceMove(this, position, position - 9, pieceMove::upgrade, position - 9,
-                                      pieceMove::knight));
-                    toReturn->push_back(
-                            pieceMove(this, position, position - 9, pieceMove::upgrade, position - 9,
-                                      pieceMove::bishop));
-                    toReturn->push_back(
-                            pieceMove(this, position, position - 9, pieceMove::upgrade, position - 9, pieceMove::rook));
-                    toReturn->push_back(
-                            pieceMove(this, position, position - 9, pieceMove::upgrade, position - 9,
-                                      pieceMove::queen));
+            if(position % 8 != 0) {
+                if (board->pieceArr[position - 9] != nullptr) {
+                    if (position < 16 && board->pieceArr[position - 9]->color == white) {
+                        toReturn->push_back(
+                                pieceMove(this, position, position - 9, pieceMove::upgrade, position - 9,
+                                          piece::knight));
+                        toReturn->push_back(
+                                pieceMove(this, position, position - 9, pieceMove::upgrade, position - 9,
+                                          piece::bishop));
+                        toReturn->push_back(
+                                pieceMove(this, position, position - 9, pieceMove::upgrade, position - 9,
+                                          piece::rook));
+                        toReturn->push_back(
+                                pieceMove(this, position, position - 9, pieceMove::upgrade, position - 9,
+                                          piece::queen));
+                    }
                 }
             }
-
 
             // en passant
             if(position > 23 && position < 32) {
 
-                if(position - 7 == board->enPassantTarget)
+                if(position % 8 != 7 && position - 7 == board->enPassantTarget)
                     toReturn->push_back(pieceMove(this, position, position - 7, pieceMove::enPassant, position + 1));
 
-                if(position - 9 == board->enPassantTarget)
+                if(position % 8 != 0 && position - 9 == board->enPassantTarget)
                     toReturn->push_back(pieceMove(this, position, position - 9, pieceMove::enPassant, position - 1));
 
             }
@@ -230,7 +239,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
         if( (position % 8) > 0 && (position / 8)  > 1) {
 
-            int newPosition = position - 17;
+            newPosition = position - 17;
 
             if (newPosition >= 0 && newPosition < 64) {
 
@@ -364,6 +373,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
 
     }
+
     else if(type == bishop || type == queen) {
 
         int tempPosition = position;
@@ -481,7 +491,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
         int tempPosition = position;
         tempPosition--;
         // left
-        while(tempPosition >= 0 && tempPosition < 64) {
+        while(tempPosition % 8 != 7 && tempPosition >= 0 && tempPosition < 64) {
             if(board->pieceArr[tempPosition] != nullptr)
                 if(board->pieceArr[tempPosition]->color == this->color)
                     break;
@@ -493,14 +503,17 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
                 }
             }
 
+
+
             toReturn->push_back(pieceMove(this, position, tempPosition));
+
             tempPosition--;
         }
 
         tempPosition = position;
         tempPosition++;
         // right
-        while(tempPosition >= 0 && tempPosition < 64) {
+        while(tempPosition % 8 != 0 && tempPosition >= 0 && tempPosition < 64) {
             if(board->pieceArr[tempPosition] != nullptr)
                 if(board->pieceArr[tempPosition]->color == this->color)
                     break;
@@ -513,6 +526,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
             }
 
             toReturn->push_back(pieceMove(this, position, tempPosition));
+
             tempPosition++;
         }
 
@@ -533,6 +547,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
             }
 
             toReturn->push_back(pieceMove(this, position, tempPosition));
+
             tempPosition += 8;
         }
 
@@ -553,6 +568,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
             }
 
             toReturn->push_back(pieceMove(this, position, tempPosition));
+
             tempPosition -= 8;
         }
 
@@ -661,6 +677,7 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
     }
 
+    // castling
     if(type == rook) {
 
         //TODO: relies on blackIncheck and whiteIncheck values that are never changed
@@ -705,31 +722,11 @@ std::vector<pieceMove>* piece::generatePseudoLegalMoves(int position, chessBoard
 
     }
 
-    //TODO: castling
 
     return toReturn;
 }
 
-void piece::pseudoLegalPrint(int position, chessBoard *board) {
 
-    auto moveVector = generatePseudoLegalMoves(position, board);
-
-    std::cout << colorToString() << " " << typeToString() << ": " << board->positionToString(position) <<std::endl;
-
-    for (int i = 0; i < moveVector->size(); ++i) {
-        std::cout << " - ";
-        (*moveVector)[i].printMove(board);
-
-    }
-
-    if(moveVector->size() == 0) {
-        std::cout << "no legal moves" << std::endl;
-
-    }
-    std::cout << std::endl;
-
-
-}
 
 std::string piece::typeToString() {
 

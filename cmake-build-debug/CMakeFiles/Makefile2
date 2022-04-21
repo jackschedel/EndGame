@@ -80,12 +80,12 @@ clean: CMakeFiles/EndGame.dir/clean
 CMakeFiles/EndGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4 "Built target EndGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target EndGame"
 .PHONY : CMakeFiles/EndGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/EndGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/EndGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/EndGame.dir/rule

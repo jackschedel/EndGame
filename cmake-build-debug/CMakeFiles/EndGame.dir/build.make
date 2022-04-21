@@ -104,11 +104,53 @@ CMakeFiles/EndGame.dir/piece.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EndGame.dir/piece.cpp.s"
 	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\piece.cpp" -o CMakeFiles\EndGame.dir\piece.cpp.s
 
+CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj: CMakeFiles/EndGame.dir/flags.make
+CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj: ../stateAnalysis.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EndGame.dir\stateAnalysis.cpp.obj -c "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\stateAnalysis.cpp"
+
+CMakeFiles/EndGame.dir/stateAnalysis.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EndGame.dir/stateAnalysis.cpp.i"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\stateAnalysis.cpp" > CMakeFiles\EndGame.dir\stateAnalysis.cpp.i
+
+CMakeFiles/EndGame.dir/stateAnalysis.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EndGame.dir/stateAnalysis.cpp.s"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\stateAnalysis.cpp" -o CMakeFiles\EndGame.dir\stateAnalysis.cpp.s
+
+CMakeFiles/EndGame.dir/decisionTreeNode.cpp.obj: CMakeFiles/EndGame.dir/flags.make
+CMakeFiles/EndGame.dir/decisionTreeNode.cpp.obj: ../decisionTreeNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EndGame.dir/decisionTreeNode.cpp.obj"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EndGame.dir\decisionTreeNode.cpp.obj -c "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\decisionTreeNode.cpp"
+
+CMakeFiles/EndGame.dir/decisionTreeNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EndGame.dir/decisionTreeNode.cpp.i"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\decisionTreeNode.cpp" > CMakeFiles\EndGame.dir\decisionTreeNode.cpp.i
+
+CMakeFiles/EndGame.dir/decisionTreeNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EndGame.dir/decisionTreeNode.cpp.s"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\decisionTreeNode.cpp" -o CMakeFiles\EndGame.dir\decisionTreeNode.cpp.s
+
+CMakeFiles/EndGame.dir/GenerateFEN.cpp.obj: CMakeFiles/EndGame.dir/flags.make
+CMakeFiles/EndGame.dir/GenerateFEN.cpp.obj: ../GenerateFEN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EndGame.dir/GenerateFEN.cpp.obj"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\EndGame.dir\GenerateFEN.cpp.obj -c "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\GenerateFEN.cpp"
+
+CMakeFiles/EndGame.dir/GenerateFEN.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EndGame.dir/GenerateFEN.cpp.i"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\GenerateFEN.cpp" > CMakeFiles\EndGame.dir\GenerateFEN.cpp.i
+
+CMakeFiles/EndGame.dir/GenerateFEN.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EndGame.dir/GenerateFEN.cpp.s"
+	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\GenerateFEN.cpp" -o CMakeFiles\EndGame.dir\GenerateFEN.cpp.s
+
 # Object files for target EndGame
 EndGame_OBJECTS = \
 "CMakeFiles/EndGame.dir/main.cpp.obj" \
 "CMakeFiles/EndGame.dir/chessBoard.cpp.obj" \
-"CMakeFiles/EndGame.dir/piece.cpp.obj"
+"CMakeFiles/EndGame.dir/piece.cpp.obj" \
+"CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj" \
+"CMakeFiles/EndGame.dir/decisionTreeNode.cpp.obj" \
+"CMakeFiles/EndGame.dir/GenerateFEN.cpp.obj"
 
 # External object files for target EndGame
 EndGame_EXTERNAL_OBJECTS =
@@ -116,11 +158,14 @@ EndGame_EXTERNAL_OBJECTS =
 EndGame.exe: CMakeFiles/EndGame.dir/main.cpp.obj
 EndGame.exe: CMakeFiles/EndGame.dir/chessBoard.cpp.obj
 EndGame.exe: CMakeFiles/EndGame.dir/piece.cpp.obj
+EndGame.exe: CMakeFiles/EndGame.dir/stateAnalysis.cpp.obj
+EndGame.exe: CMakeFiles/EndGame.dir/decisionTreeNode.cpp.obj
+EndGame.exe: CMakeFiles/EndGame.dir/GenerateFEN.cpp.obj
 EndGame.exe: CMakeFiles/EndGame.dir/build.make
 EndGame.exe: CMakeFiles/EndGame.dir/linklibs.rsp
 EndGame.exe: CMakeFiles/EndGame.dir/objects1.rsp
 EndGame.exe: CMakeFiles/EndGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable EndGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Documents\School\UF Freshman\Semester 2\Data Structures\Project 3\EndGame\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable EndGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\EndGame.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

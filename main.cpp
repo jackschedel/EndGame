@@ -1,53 +1,140 @@
 #include <iostream>
+#include <utility>
+
+#include "stateAnalysis.h"
+#include "GenerateFEN.h"
 #include "chessBoard.h"
+#include "pieceMove.h"
+#include "piece.h"
+#include "decisionTreeNode.h"
+
 
 int main() {
 
+    GenerateFEN fenGen("testCases.csv");
+
+    std::pair<std::string, std::string> randomPuzzle = fenGen.randomFEN();
+
+    std::cout << std::endl << "given FEN String: " << randomPuzzle.first << std::endl;
+
+    std::cout << "given opponent first move: " << randomPuzzle.second << std::endl << std::endl;
+
+    stateAnalysis* state = new stateAnalysis();
+
     chessBoard board;
 
-    //board.boardInit();
-    //board.boardInit("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
-    //board.boardInit("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2");
+    board.boardInit(randomPuzzle.first);
 
-    board.boardInit("r2q1rk1/1bp1bppp/p1np1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - d3 0 10");
+    auto startingPosPair = board.givenStringParse(randomPuzzle.second);
 
-    //board.boardInit("r3k2r/8/1qn1bn1b/pppppppp/PPPPPPPP/1QNBBN2/8/R3K2R w Qkq - 10 18");
+    auto pseudoLegalMoves = board.genAllPseudoLegalMoves();
 
+    pieceMove* move = nullptr;
 
-
-
-
-    //board.boardInit("r3k2r/8/5p2/8/8/5P2/8/R3K2R w --kq - 1 1");
+    for (int i = 0; i < pseudoLegalMoves->size(); ++i) {
 
 
-    /* bishop testing
-    board.pieceArr[35] = new piece(piece::bishop, piece::white);
-
-    board.pieceArr[21] = new piece(piece::pawn, piece::black);
-     */
-
-    /*
-     * "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - d3 0 10"
-     * advanced FEN with en passant for testing ^
-     * should look like
-     * https://cdn.discordapp.com/attachments/446426925209092098/965708877683363960/unknown.png
-     * and it does
-     */
-
-
-    board.printBoard();
-
-
-    std::cout << std::endl;
-
-    for (int i = 0; i < 64; ++i) {
-        if(board.pieceArr[i] != nullptr) {
-            board.pieceArr[i]->pseudoLegalPrint(i, &board);
-            std::cout << std::endl;
+        if((*pseudoLegalMoves)[i].from == startingPosPair.first) {
+            if ((*pseudoLegalMoves)[i].to == startingPosPair.second) {
+                move = &(*pseudoLegalMoves)[i];
+                break;
+            }
         }
     }
 
 
+    state->mainAnalysis(randomPuzzle.first, *move);
+
+
+
+
+    /*
+    chessBoard initBoard;
+
+    initBoard.boardInit("3r2k1/4nppp/pq1p1b2/1p2P3/2r2P2/2P1NR2/PP1Q2BP/3R2K1 b - - 0 24");
+
+    decisionTreeNode* decisionTree = new decisionTreeNode(initBoard);
+
+    decisionTree->board.printBoard();
+
+    std::cout << std::endl;
+
+    auto PSMoveArr = decisionTree->board.genAllPseudoLegalMoves();
+
+    decisionTree->board.pseudoLegalPrint(PSMoveArr);
+
+    std::cout << std::endl;
+
+
+    if(decisionTree->board.isInCheck(piece::white))
+        std::cout << "white in check!"<< std::endl<< std::endl;
+
+    if(decisionTree->board.isInCheck(piece::black))
+        std::cout << "black in check!"<< std::endl<< std::endl;
+
+    auto result = decisionTree->iterateOnce();
+
+    std::cout << "psmove size: " << PSMoveArr->size() << std::endl;
+
+    std::cout << "children size: " << decisionTree->children.size() << std::endl;
+
+
+    chessBoard test;
+
+    test.boardInit("3R2k1/4nppp/p4b2/1p2p3/2r2P2/2P1NR2/PP4BP/6K1 b - - 0 26");
+
+    std::cout << test.isCheckmate();
+*/
+
+    /*
+    std::vector<pieceMove>* PLmoves;
+
+    PLmoves = state->board->pieceArr[34]->generatePseudoLegalMoves(34, state->board);
+
+
+
+
+    pieceMove* move = &((*PLmoves)[1]);
+
+    std::cout << std::endl << std::endl;
+
+    bool executeSuccess = state->board->executeMove(move);
+
+    if(!executeSuccess) {
+        std::cout << "failed to execute move!" << std::endl;
+    } else {
+
+
+        state->board->printBoard();
+
+
+
+        std::cout << std::endl;
+
+
+
+        if(state->board->isInCheck(piece::white))
+            std::cout << "white in check!"<< std::endl<< std::endl;
+
+        if(state->board->isInCheck(piece::black))
+            std::cout << "black in check!"<< std::endl<< std::endl;
+
+
+        for (int i = 0; i < 64; ++i) {
+            if(state->board->pieceArr[i] != nullptr) {
+
+                std::vector<pieceMove>* PLmoves = state->board->pieceArr[i]->generatePseudoLegalMoves(i, state->board);
+
+                state->board->pieceArr[i]->pseudoLegalPrint(i, state->board, PLmoves);
+                std::cout << std::endl;
+            }
+        }
+
+
+    }
+
+
+*/
 
 }
 
