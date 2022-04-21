@@ -13,7 +13,7 @@ int main() {
 
     GenerateFEN fenGen = GenerateFEN("mate_in_lichess_db_puzzles.csv");
 
-    auto randomPuzzle = fenGen.randomFEN();
+    std::pair<std::string, std::string> randomPuzzle = fenGen.randomFEN();
 
     std::string FEN = randomPuzzle.first;
 
