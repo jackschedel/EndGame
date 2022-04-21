@@ -2,6 +2,7 @@
 #include <utility>
 
 #include "stateAnalysis.h"
+#include "GenerateFEN.h"
 #include "chessBoard.h"
 #include "pieceMove.h"
 #include "piece.h"

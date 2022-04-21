@@ -128,6 +128,30 @@ EndGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/build
 .PHONY : EndGame/fast
 
+GenerateFEN.obj: GenerateFEN.cpp.obj
+.PHONY : GenerateFEN.obj
+
+# target to build an object file
+GenerateFEN.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/GenerateFEN.cpp.obj
+.PHONY : GenerateFEN.cpp.obj
+
+GenerateFEN.i: GenerateFEN.cpp.i
+.PHONY : GenerateFEN.i
+
+# target to preprocess a source file
+GenerateFEN.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/GenerateFEN.cpp.i
+.PHONY : GenerateFEN.cpp.i
+
+GenerateFEN.s: GenerateFEN.cpp.s
+.PHONY : GenerateFEN.s
+
+# target to generate assembly for a file
+GenerateFEN.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EndGame.dir\build.make CMakeFiles/EndGame.dir/GenerateFEN.cpp.s
+.PHONY : GenerateFEN.cpp.s
+
 chessBoard.obj: chessBoard.cpp.obj
 .PHONY : chessBoard.obj
 
@@ -257,6 +281,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... EndGame
+	@echo ... GenerateFEN.obj
+	@echo ... GenerateFEN.i
+	@echo ... GenerateFEN.s
 	@echo ... chessBoard.obj
 	@echo ... chessBoard.i
 	@echo ... chessBoard.s
