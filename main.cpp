@@ -11,10 +11,17 @@
 
 int main() {
 
+    GenerateFEN fenGen = GenerateFEN("mate_in_lichess_db_puzzles.csv");
 
-    std::string FEN = "r1bqk2r/pp1nbNp1/2p1p2p/8/2BP4/1PN3P1/P3QP1P/3R1RK1 b kq - 0 19";
+    auto randomPuzzle = fenGen.randomFEN();
 
-    std::string opponentMove = "e8f7";
+    std::string FEN = randomPuzzle.first;
+
+    std::string opponentMove = randomPuzzle.second;
+
+    std::cout << FEN << " " << opponentMove;
+
+    return 0;
 
 
     stateAnalysis* state = new stateAnalysis();
